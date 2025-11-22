@@ -12,7 +12,7 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
-    base: "/React_Vite_CICD_Github/",
+    base: "/namaste/",
     server: {
         open: true,
         port: 3001,
