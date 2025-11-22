@@ -10,6 +10,11 @@ export default defineConfig({
                 plugins: [['babel-plugin-react-compiler']],
             },
         }),
-        tailwindcss()
+        tailwindcss(),
     ],
+    base: "/React_Vite_CICD_Github/",
+    server: {
+        open: true,
+        port: 3001,
+    },
 })

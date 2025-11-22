@@ -7,12 +7,14 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite build && vite preview"
+    "preview": "vite build && vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@lineiconshq/free-icons": "^1.0.3",
     "@lineiconshq/react-lineicons": "^1.0.5",
     "@tailwindcss/vite": "^4.1.16",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.552.0",
     "nepali-date-converter": "^3.4.0",
     "react": "^19.1.1",
