@@ -2,6 +2,8 @@
 import {FaFacebookF, FaLinkedinIn} from "react-icons/fa";
 import {AnimatedBorder} from "../components/AnimatedBorder.tsx";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export const Contact = () => {
     const contactDetails = [
         {
@@ -9,7 +11,7 @@ export const Contact = () => {
             name: "बिनोद कुमार मैनाली",
             phone: "111111111",
             email: "binod@gmail.com",
-            imgLink: "../../images/binod.png",
+            imgLink: `${BASE_URL}images/binod.png`,
             alt: "बिनोद कुमार मैनाली"
         },
         {
@@ -17,7 +19,7 @@ export const Contact = () => {
             name: "माधव कुमार नेपाल",
             phone: "22222222",
             email: "madhab@gmail.com",
-            imgLink: "../../images/madhav.jpg",
+            imgLink: `${BASE_URL}images/madhav.jpg`,
             alt: "माधव कुमार नेपाल"
         }
     ];

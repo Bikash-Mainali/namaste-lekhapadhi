@@ -10,6 +10,8 @@ type NavLink = {
     link: string;
 };
 
+const brand = import.meta.env.BASE_URL + "images/brand.svg";
+
 const navLinks: NavLink[] = [
     { name: "गृहपृष्ठ", link: "/" },
     { name: "हाम्रोबारे", link: "/about" },
@@ -71,7 +73,7 @@ const Header = () => {
 
             <nav className="flex flex-col [@media(min-width:1100px)]:flex-row items-center justify-between px-4 sm:px-6 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 h-[var(--header-height)] z-50">
                 <Link to="/" className="flex self-auto [@media(max-width:1100px)]:self-start items-center space-x-3">
-                    <img src="/images/brand.svg" height="60" width="60" alt="नमस्ते लोगो" className="object-contain" />
+                    <img src={brand} height="60" width="60" alt="नमस्ते लोगो" className="object-contain" />
                     <span className="text-1xl md:text-4xl font-bold gradient-text py-2">नमस्ते लेखापढी</span>
                 </Link>
 
