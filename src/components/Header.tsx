@@ -79,7 +79,7 @@ const Header = () => {
                     <span className="text-4xl font-bold gradient-text py-2">नमस्ते लेखापढी</span>
                 </Link>
 
-                <div className="[@media(max-width:980px)]:hidden flex flex-col self-auto [@media(max-width:1100px)]:self-end md:flex-row items-center [@media(max-width:1100px)]:pb-4 space-y-2 md:space-y-0 md:space-x-10 text-2xl">
+                <div className="[@media(max-width:900px)]:hidden flex flex-col self-auto [@media(max-width:1100px)]:self-end md:flex-row items-center [@media(max-width:1100px)]:pb-4 space-y-2 md:space-y-0 md:space-x-10 text-xl">
                     {navLinks.map((link) => (
                         <NavLink
                             key={link.name}
@@ -92,9 +92,9 @@ const Header = () => {
                     ))}
                 </div>
 
-                <div className="[@media(min-width:980px)]:hidden absolute top-0 right-0 m-4 z-50">
+                <div className="[@media(min-width:900px)]:hidden absolute top-0 right-0 m-4 z-50">
                     <button
-                        className="[@media(min-width:980px)]:block text-3xl text-gray-700 focus:outline-none"
+                        className="[@media(min-width:900px)]:block text-3xl text-gray-700 focus:outline-none"
                         onClick={() => setMenuOpen(!menuOpen)}
                         aria-label="menu"
                     >
