@@ -20,7 +20,7 @@ export const Home = () => {
                 <div
                     className="relative z-10 flex flex-col items-center justify-center text-center text-white pt-[30vh]  w-full px-4">
                     <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                        नमस्ते कानुनी सेवालयमा स्वागत छ
+                        नमस्ते लेखापढीमा स्वागत छ
                     </h1>
                     <p className="text-lg md:text-2xl max-w-3xl mb-8">
                         उपयुक्त जग्गा पत्ता लगाउन तपाईंको भरपर्दो साझेदार
