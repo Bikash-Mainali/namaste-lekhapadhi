@@ -11,7 +11,7 @@ import {Janakari} from "../pages/Janakari.tsx";
 
 export const index = createBrowserRouter([
     {
-        path: "/",
+        path: "/namaste-lekhapadhi/",
         element: <RootLayout/>,
         errorElement: <ErrorPage/>, // this will render when error occurs in the route or any of its children
         children: [
