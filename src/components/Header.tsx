@@ -10,12 +10,12 @@ type NavLink = {
 
 const navLinks: NavLink[] = [
     { name: "गृहपृष्ठ", link: "/" },
-    { name: "हाम्रोबारे", link: "/about" },
-    { name: "सेवाहरू", link: "/services" },
-    { name: "जानकारी", link: "/janakari" },
-    { name: "लेख", link: "/blogs" },
-    { name: "ग्यालरी", link: "/gallery" },
-    { name: "सम्पर्क", link: "/contact" },
+    { name: "हाम्रोबारे", link: "/namaste-lekhapadhi/about" },
+    { name: "सेवाहरू", link: "/namaste-lekhapadhi/services" },
+    { name: "जानकारी", link: "/namaste-lekhapadhi/janakari" },
+    { name: "लेख", link: "/namaste-lekhapadhi/blogs" },
+    { name: "ग्यालरी", link: "/namaste-lekhapadhi/gallery" },
+    { name: "सम्पर्क", link: "/namaste-lekhapadhi/contact" },
 ];
 
 const Header = () => {

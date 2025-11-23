@@ -12,17 +12,17 @@ import {Janakari} from "../pages/Janakari.tsx";
 
 export const index = createHashRouter([
     {
-        path: "/",
+        path: "/namaste-lekhapadhi/",
         element: <RootLayout/>,
         errorElement: <ErrorPage/>,
         children: [
             {index: true, element: <Home/>},
-            {path: "about", element: <About/>},
-            {path: "contact", element: <Contact/>},
-            {path: "services", element: <Services/>},
-            {path: "blogs", element: <Blogs/>},
-            {path: "gallery", element: <Gallery/>},
-            {path: "janakari", element: <Janakari/>}
+            {path: "/namaste-lekhapadhi/about", element: <About/>},
+            {path: "/namaste-lekhapadhi/contact", element: <Contact/>},
+            {path: "/namaste-lekhapadhi/services", element: <Services/>},
+            {path: "/namaste-lekhapadhi/blogs", element: <Blogs/>},
+            {path: "/namaste-lekhapadhi/gallery", element: <Gallery/>},
+            {path: "/namaste-lekhapadhi/janakari", element: <Janakari/>}
         ],
     },
 ]);
