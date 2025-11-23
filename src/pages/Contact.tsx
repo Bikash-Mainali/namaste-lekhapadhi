@@ -1,6 +1,7 @@
 // src/pages/Contact.tsx
-import {FaFacebookF, FaLinkedinIn} from "react-icons/fa";
+import {FaFacebookF} from "react-icons/fa";
 import {AnimatedBorder} from "../components/AnimatedBorder.tsx";
+import {FcGoogle} from "react-icons/fc";
 
 const BASE_URL = import.meta.env.BASE_URL;
 
@@ -27,7 +28,7 @@ export const Contact = () => {
     return (
         <section id="contact-us" className="py-30 text-base sm:text-lg">
             <div className="max-w-10/12 mx-auto px-6">
-                <h2 className="text-5xl font-extrabold text-gray-800 mb-30 text-center">
+                <h2 className="text-4xl font-extrabold text-gray-800 mb-30 text-center">
                     सम्पर्क
                 </h2>
 
@@ -49,8 +50,8 @@ export const Contact = () => {
 
                             <div className="flex justify-center md:justify-start space-x-5 mt-4">
                                 {[
-                                    {icon: <FaFacebookF/>, color: "blue"},
-                                    {icon: <FaLinkedinIn/>, color: "blue"},
+                                    {icon: <FaFacebookF/>, color: "blue", href: "https://www.facebook.com/binodkumar.mainali"},
+                                    {icon: <FcGoogle/>, color: "blue", href: "https://share.google/efNct91hwVi1KUvOO"},
                                 ].map((item, idx) => (
                                     <a
                                         key={idx}

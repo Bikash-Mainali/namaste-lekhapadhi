@@ -89,7 +89,7 @@ export function Gallery() {
     return (
         <section id="gallery" className="py-30 text-base sm:text-lg">
             <div className="max-w-10/12 mx-auto px-6">
-                <h2 className="text-5xl font-extrabold text-gray-800 mb-30 text-center">
+                <h2 className="text-4xl font-extrabold text-gray-800 mb-30 text-center">
                     ग्यालरी
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">

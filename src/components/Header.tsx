@@ -1,24 +1,23 @@
-
 // src/components/Header.tsx
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import NepaliDate from "nepali-date-converter";
 import { HiMenu, HiX } from "react-icons/hi";
 
-type NavLink = {
+type NavLinkItem = {
     name: string;
     link: string;
 };
 
 const brand = import.meta.env.BASE_URL + "images/brand.svg";
 
-const navLinks: NavLink[] = [
+const navLinks: NavLinkItem[] = [
     { name: "गृहपृष्ठ", link: "/" },
-    { name: "हाम्रोबारे", link: "/about" },
+    { name: "हाम्रो बारे", link: "/about" },
     { name: "सेवाहरू", link: "/services" },
     { name: "जानकारी", link: "/janakari" },
-    { name: "लेख", link: "/blogs" },
-    { name: "ग्यालरी", link: "/gallery" },
+    { name: "ब्लगहरू", link: "/blogs" },
+    { name: "फोटो ग्यालरी", link: "/gallery" },
     { name: "सम्पर्क", link: "/contact" },
 ];
 
@@ -65,6 +64,9 @@ const Header = () => {
         return () => clearInterval(timer);
     }, []);
 
+    const getNavClass = ({ isActive }: { isActive: boolean }) =>
+        `${isActive ? "text-blue-600 font-bold" : "text-gray-700 hover:text-blue-600"} transition`;
+
     return (
         <header className="fixed top-0 w-full z-50">
             <div className="h-11 flex justify-end items-center px-4 sm:px-6 bg-gray-900 text-white text-sm sm:text-base">
@@ -74,20 +76,25 @@ const Header = () => {
             <nav className="flex flex-col [@media(min-width:1100px)]:flex-row items-center justify-between px-4 sm:px-6 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 h-[var(--header-height)] z-50">
                 <Link to="/" className="flex self-auto [@media(max-width:1100px)]:self-start items-center space-x-3">
                     <img src={brand} height="60" width="60" alt="नमस्ते लोगो" className="object-contain" />
-                    <span className="text-1xl md:text-4xl font-bold gradient-text py-2">नमस्ते लेखापढी</span>
+                    <span className="text-4xl font-bold gradient-text py-2">नमस्ते लेखापढी</span>
                 </Link>
 
-                <div className="[@media(max-width:800px)]:hidden flex flex-col self-auto [@media(max-width:1100px)]:self-end md:flex-row items-center [@media(max-width:1100px)]:pb-4 space-y-2 md:space-y-0 md:space-x-6 text-lg md:text-2xl">
+                <div className="[@media(max-width:980px)]:hidden flex flex-col self-auto [@media(max-width:1100px)]:self-end md:flex-row items-center [@media(max-width:1100px)]:pb-4 space-y-2 md:space-y-0 md:space-x-10 text-2xl">
                     {navLinks.map((link) => (
-                        <Link key={link.name} to={link.link} className="text-gray-700 hover:text-blue-600 transition">
+                        <NavLink
+                            key={link.name}
+                            to={link.link}
+                            end={link.link === "/"}
+                            className={getNavClass}
+                        >
                             {link.name}
-                        </Link>
+                        </NavLink>
                     ))}
                 </div>
 
-                <div className="[@media(min-width:800px)]:hidden absolute top-0 right-0 m-4 z-50">
+                <div className="[@media(min-width:980px)]:hidden absolute top-0 right-0 m-4 z-50">
                     <button
-                        className="[@media(min-width:1100px)]:block text-3xl text-gray-700 focus:outline-none"
+                        className="[@media(min-width:980px)]:block text-3xl text-gray-700 focus:outline-none"
                         onClick={() => setMenuOpen(!menuOpen)}
                         aria-label="menu"
                     >
@@ -99,14 +106,15 @@ const Header = () => {
             {menuOpen && (
                 <div className="flex bg-white flex-col space-y-4 px-4 sm:px-6 py-4 text-lg shadow-lg">
                     {navLinks.map((link) => (
-                        <Link
+                        <NavLink
                             key={link.name}
                             to={link.link}
-                            className="text-gray-700 hover:text-blue-600 transition"
+                            end={link.link === "/"}
+                            className={getNavClass}
                             onClick={() => setMenuOpen(false)}
                         >
                             {link.name}
-                        </Link>
+                        </NavLink>
                     ))}
                 </div>
             )}

@@ -3,7 +3,7 @@ export const About= () => {
         <>
             <section id="about-us" className="py-30 bg-gray-50">
                 <div className="max-w-10/12 mx-auto px-6">
-                    <h2 className="text-5xl font-extrabold text-gray-800 mb-30 text-center">
+                    <h2 className="text-4xl font-extrabold text-gray-800 mb-30 text-center">
                         हाम्रो बारेमा
                     </h2>
 

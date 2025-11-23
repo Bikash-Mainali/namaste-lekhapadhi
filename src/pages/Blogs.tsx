@@ -185,7 +185,7 @@ export const Blogs = () => {
     return (
         <section id="blogs" className="py-30 bg-gray-50">
             <div className="max-w-10/12 mx-auto px-6">
-                <h2 className="text-5xl font-extrabold text-gray-800 mb-30 text-center">
+                <h2 className="text-4xl font-extrabold text-gray-800 mb-30 text-center">
                     ब्लगहरू
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">

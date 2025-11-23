@@ -1,8 +1,9 @@
+
 export function Janakari() {
     return (
         <section id="contact-us" className="py-30 text-base sm:text-lg">
             <div className="max-w-4xl mx-auto px-6 text-center">
-                <h2 className="text-5xl font-extrabold text-gray-800 mb-6">
+                <h2 className="text-4xl font-extrabold text-gray-800 mb-6">
                     जग्गा नाप सम्बन्धी जानकारी
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto mb-20 text-lg">
@@ -107,7 +108,11 @@ export function Janakari() {
                     </dl>
                 </section>
             </div>
-
+            <div className="w-full max-w-3/4 mx-auto flex flex-col space-y-8 px-6 mt-20">
+                <section className="w-full text-left">
+                    <img src={`${import.meta.env.BASE_URL}/images/jagga-nap.png`} alt="jagga nap sambandhi jankari" className="h-[500px]"/>
+                </section>
+            </div>
             <section className="bg-blue-100 mt-20 p-6 rounded-lg shadow-lg text-center max-w-4xl mx-auto">
                 <h2 className="text-2xl font-semibold mb-2 text-blue-700">
                     सहयोगका लागि सम्पर्क गर्नुहोस्
