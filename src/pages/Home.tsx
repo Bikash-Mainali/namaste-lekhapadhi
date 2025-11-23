@@ -13,9 +13,11 @@ export const Home = () => {
             >
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/40"></div>
-                <button id="vertical-facebook" className="fixed top-3/6 right-0 text-white rotate-90 origin-top-right
- bg-blue-600 px-4 z-10 cursor-pointer">फेसबुक
-                </button>
+
+                <a href="https://www.facebook.com/binodkumar.mainali" id="vertical-google" className="fixed top-3/6 right-0 text-white rotate-90 origin-top-right
+ bg-red-600 px-4 z-40">फेसबुक
+                </a>
+
                 {/* Centered Content */}
                 <div
                     className="relative z-10 flex flex-col items-center justify-center text-center text-white pt-[30vh]  w-full px-4">

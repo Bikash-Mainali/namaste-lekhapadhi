@@ -50,12 +50,12 @@ export const Contact = () => {
 
                             <div className="flex justify-center md:justify-start space-x-5 mt-4">
                                 {[
-                                    {icon: <FaFacebookF/>, color: "blue", href: "https://www.facebook.com/binodkumar.mainali"},
-                                    {icon: <FcGoogle/>, color: "blue", href: "https://share.google/efNct91hwVi1KUvOO"},
-                                ].map((item, idx) => (
+                                    {id: 1, icon: <FaFacebookF/>, color: "blue", href: "https://www.facebook.com/binodkumar.mainali"},
+                                    {id: 2, icon: <FcGoogle/>, color: "blue", href: "https://share.google/efNct91hwVi1KUvOO"},
+                                ].map((item) => (
                                     <a
-                                        key={idx}
-                                        href="#"
+                                        key={item.id}
+                                        href={item.href}
                                         className={`flex items-center text-2xl justify-center w-12 h-12 rounded-full bg-${item.color}-100 text-${item.color}-600 hover:bg-blue-500 hover:text-white transition-transform duration-300 transform hover:scale-110`}
                                         aria-label={item.icon?.type?.name || "सामाजिक लिंक"}
                                     >

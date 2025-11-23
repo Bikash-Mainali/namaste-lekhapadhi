@@ -74,11 +74,11 @@ export default function Navbar() {
                 <div className="flex flex-col gap-4 items-center  flex-wrap ">
                     <div className="flex space-x-4 sm:space-x-5 ">
                         {[
-                            {icon: <FaFacebookF/>, color: "blue", href: "https://www.facebook.com/binodkumar.mainali"},
-                            {icon: <FcGoogle/>, color: "blue", href: "https://share.google/efNct91hwVi1KUvOO"},
+                            {id:1, icon: <FaFacebookF/>, color: "blue", href: "https://www.facebook.com/binodkumar.mainali"},
+                            {id:2, icon: <FcGoogle/>, color: "blue", href: "https://share.google/efNct91hwVi1KUvOO"},
                         ].map((item, idx) => (
                             <a
-                                key={idx}
+                                key={item.id}
                                 href={item.href}
                                 className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full
                                     bg-white text-blue-500
