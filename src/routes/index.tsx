@@ -1,4 +1,5 @@
-import {createBrowserRouter} from "react-router";
+// src/routes/index.tsx
+import {createHashRouter} from "react-router";
 import RootLayout from "./RootLayout";
 import ErrorPage from "./ErrorPage";
 import {Home} from "../pages/Home.tsx";
@@ -9,11 +10,11 @@ import {Blogs} from "../pages/Blogs.tsx";
 import {Gallery} from "../pages/Gallery.tsx";
 import {Janakari} from "../pages/Janakari.tsx";
 
-export const index = createBrowserRouter([
+export const index = createHashRouter([
     {
         path: "/",
         element: <RootLayout/>,
-        errorElement: <ErrorPage/>, // this will render when error occurs in the route or any of its children
+        errorElement: <ErrorPage/>,
         children: [
             {index: true, element: <Home/>},
             {path: "about", element: <About/>},
@@ -24,6 +25,4 @@ export const index = createBrowserRouter([
             {path: "janakari", element: <Janakari/>}
         ],
     },
-], {
-    basename: "/namaste-lekhapadhi",
-});
+]);
