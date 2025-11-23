@@ -12,7 +12,6 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
-    base: "/namaste-lekhapadhi/",
     server: {
         open: true,
         port: 3001,
