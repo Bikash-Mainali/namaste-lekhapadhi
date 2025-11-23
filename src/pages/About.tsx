@@ -1,6 +1,4 @@
-import type {FC} from "react";
-
-export const About: FC = () => {
+export const About= () => {
     return (
         <>
             <section id="about-us" className="py-30 bg-gray-50">
