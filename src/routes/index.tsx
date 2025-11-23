@@ -24,6 +24,6 @@ export const index = createBrowserRouter([
             {path: "janakari", element: <Janakari/>}
         ],
     },
-],{
+], {
     basename: "/namaste-lekhapadhi",
 });
