@@ -10,8 +10,8 @@ export const Contact = () => {
         {
             id: 1,
             name: "बिनोद कुमार मैनाली",
-            phone: "111111111",
-            email: "binod@gmail.com",
+            phone: "9851069249",
+            email: "binodkumar699@gmail.com",
             imgLink: `${BASE_URL}images/binod.png`,
             alt: "बिनोद कुमार मैनाली"
         },
