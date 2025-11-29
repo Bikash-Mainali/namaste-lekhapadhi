@@ -18,8 +18,8 @@ export const Contact = () => {
         {
             id: 2,
             name: "माधव कुमार नेपाल",
-            phone: "22222222",
-            email: "madhab@gmail.com",
+            phone: "9843593698",
+            email: "nmadhavkumar3@gmail.com",
             imgLink: `${BASE_URL}images/madhav.jpg`,
             alt: "माधव कुमार नेपाल"
         }
