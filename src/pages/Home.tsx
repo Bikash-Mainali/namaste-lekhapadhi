@@ -22,14 +22,14 @@ export const Home = () => {
                 {/* Centered Content */}
                 <div
                     className="relative z-10 flex flex-col items-center justify-center text-center text-white pt-[30vh]  w-full px-4">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
                         नमस्ते लेखापढीमा स्वागत छ
                     </h1>
-                    <p className="text-lg md:text-2xl max-w-3xl mb-8">
+                    <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mb-8">
                         उपयुक्त जग्गा पत्ता लगाउन तपाईंको भरपर्दो साझेदार
                     </p>
                     <NavLink to="/contact"
-                             className="hover:scale-105 transform transition-all duration-300 text-lg md:text-2xl rounded-full bg-black py-4 px-12 tracking-widest cursor-pointer gradient-background font-bold">
+                             className="hover:scale-105 transform transition-all duration-300 sm:text-xl rounded-full bg-black py-3 sm:py-4  px-7 sm:px-12 tracking-widest cursor-pointer gradient-background font-bold">
                         सम्पर्क गर्नुहोस्
                     </NavLink>
                 </div>

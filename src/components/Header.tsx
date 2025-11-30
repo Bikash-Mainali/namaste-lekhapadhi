@@ -1,8 +1,8 @@
 // src/components/Header.tsx
-import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import {useEffect, useState} from "react";
+import {Link, NavLink} from "react-router-dom";
 import NepaliDate from "nepali-date-converter";
-import { HiMenu, HiX } from "react-icons/hi";
+import {HiMenu, HiX} from "react-icons/hi";
 
 type NavLinkItem = {
     name: string;
@@ -11,32 +11,32 @@ type NavLinkItem = {
 
 console.log(import.meta.env.MODE)      // "development" | "production"
 console.log(import.meta.env.BASE_URL)  // "/"
-console.log( import.meta.env.VITE_API_URL)
+console.log(import.meta.env.VITE_API_URL)
 // true/false
 
- const brand = import.meta.env.BASE_URL + "images/brand.svg";
+const brand = import.meta.env.BASE_URL + "images/brand.svg";
 
 const navLinks: NavLinkItem[] = [
-    { name: "गृहपृष्ठ", link: "/" },
-    { name: "हाम्रो बारे", link: "/about" },
-    { name: "सेवाहरू", link: "/services" },
-    { name: "जानकारी", link: "/janakari" },
-    { name: "ब्लगहरू", link: "/blogs" },
-    { name: "फोटो ग्यालरी", link: "/gallery" },
-    { name: "सम्पर्क", link: "/contact" },
+    {name: "गृहपृष्ठ", link: "/"},
+    {name: "हाम्रो बारे", link: "/about"},
+    {name: "सेवाहरू", link: "/services"},
+    {name: "जानकारी", link: "/janakari"},
+    {name: "ब्लगहरू", link: "/blogs"},
+    {name: "फोटो ग्यालरी", link: "/gallery"},
+    {name: "सम्पर्क", link: "/contact"},
 ];
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     function toNepaliDigits(num: number | string) {
-        const nepaliNums = ["०","१","२","३","४","५","६","७","८","९"];
+        const nepaliNums = ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"];
         return num.toString().replace(/\d/g, (d) => nepaliNums[parseInt(d)]);
     }
 
     function getNepalTimeNepali() {
         const now = new Date();
-        const nptTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kathmandu" }));
+        const nptTime = new Date(now.toLocaleString("en-US", {timeZone: "Asia/Kathmandu"}));
         const hours = nptTime.getHours();
         const minutes = String(nptTime.getMinutes()).padStart(2, "0");
         const seconds = String(nptTime.getSeconds()).padStart(2, "0");
@@ -56,8 +56,8 @@ const Header = () => {
         const month = date.getMonth();
         const day = date.getDate();
 
-        const nepaliWeekdays = ["आइतबार","सोमबार","मंगलबार","बुधबार","बिहीबार","शुक्रबार","शनिबार"];
-        const nepaliMonths = ["बैशाख","जेठ","असार","श्रावण","भाद्र","आश्विन","कार्तिक","मंसिर","पौष","माघ","फाल्गुण","चैत्र"];
+        const nepaliWeekdays = ["आइतबार", "सोमबार", "मंगलबार", "बुधबार", "बिहीबार", "शुक्रबार", "शनिबार"];
+        const nepaliMonths = ["बैशाख", "जेठ", "असार", "श्रावण", "भाद्र", "आश्विन", "कार्तिक", "मंसिर", "पौष", "माघ", "फाल्गुण", "चैत्र"];
 
         return `${nepaliMonths[month]} ${toNepaliDigits(day)}, ${toNepaliDigits(year)}, ${nepaliWeekdays[date.getDay()]}, ${getNepalTimeNepali()}`;
     }
@@ -69,22 +69,26 @@ const Header = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const getNavClass = ({ isActive }: { isActive: boolean }) =>
+    const getNavClass = ({isActive}: { isActive: boolean }) =>
         `${isActive ? "gradient-text font-bold" : "text-gray-700 hover:text-blue-600"} transition`;
 
     return (
         <header className="fixed top-0 w-full z-50">
-            <div className="h-11 flex justify-end items-center px-4 sm:px-6 bg-gray-900 text-white text-sm sm:text-base">
+            <div
+                className="h-11 flex justify-end items-center px-4 sm:px-6 bg-gray-900 text-white text-sm sm:text-base">
                 <p>{dateTime}</p>
             </div>
 
-            <nav className="flex flex-col [@media(min-width:1100px)]:flex-row items-center justify-between px-4 sm:px-6 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 h-[var(--header-height)] z-50">
+            <nav
+                className="flex flex-col [@media(min-width:1100px)]:flex-row items-center justify-between px-4 py-2 sm:px-6 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 h-[var(--header-height)] z-50">
                 <Link to="/" className="flex self-auto [@media(max-width:1100px)]:self-start items-center space-x-3">
-                    <img src={brand} height="60" width="60" alt="नमस्ते लोगो" className="object-contain" />
-                    <span className="text-4xl font-bold gradient-text py-2">नमस्ते लेखापढी</span>
+                    <img src={brand} height="60" width="60" alt="नमस्ते लोगो" className="object-contain"/>
+                    <span
+                        className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text py-2">नमस्ते लेखापढी</span>
                 </Link>
 
-                <div className="[@media(max-width:900px)]:hidden flex flex-col self-auto [@media(max-width:1100px)]:self-end md:flex-row items-center [@media(max-width:1100px)]:pb-4 space-y-2 md:space-y-0 md:space-x-10 text-xl">
+                <div
+                    className="[@media(max-width:900px)]:hidden flex flex-col self-auto [@media(max-width:1100px)]:self-end md:flex-row items-center [@media(max-width:1100px)]:pb-4 space-y-2 md:space-y-0 md:space-x-10 text-xl">
                     {navLinks.map((link) => (
                         <NavLink
                             key={link.name}
@@ -103,7 +107,7 @@ const Header = () => {
                         onClick={() => setMenuOpen(!menuOpen)}
                         aria-label="menu"
                     >
-                        {menuOpen ? <HiX /> : <HiMenu /> }
+                        {menuOpen ? <HiX/> : <HiMenu/>}
                     </button>
                 </div>
             </nav>
@@ -126,5 +130,4 @@ const Header = () => {
         </header>
     );
 };
-
 export default Header;

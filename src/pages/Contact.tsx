@@ -26,9 +26,9 @@ export const Contact = () => {
     ];
 
     return (
-        <section id="contact-us" className="py-30 text-base sm:text-lg">
+        <section id="contact" className="py-20 sm:py-22 md:py-30 bg-gray-50">
             <div className="max-w-10/12 mx-auto px-6">
-                <h2 className="text-4xl font-extrabold text-gray-800 mb-30 text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-15 sm:mb-22 md:mb-30 text-center">
                     सम्पर्क
                 </h2>
 
@@ -39,11 +39,11 @@ export const Contact = () => {
                             className="flex-1 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
                             <div className="relative rounded-lg gradient-background">
                                 <AnimatedBorder>
-                                    <div className="text-3xl font-bold tracking-widest p-4">सम्पर्क गर्नुहोस्</div>
+                                    <div className="text-lg sm:text-xl md:text-2xl font-bold tracking-widest p-2 sm:p-3 md:p-4">सम्पर्क गर्नुहोस्</div>
                                 </AnimatedBorder>
                             </div>
 
-                            <p className="text-gray-600 max-w-md">
+                            <p className="text-gray-600 max-w-md text-sm">
                                 हामी तपाईंको सन्देश सुन्न चाहन्छौं! सन्देश पठाउनुहोस् वा सामाजिक सञ्जाल मार्फत
                                 जोडिनुहोस्।
                             </p>
@@ -85,7 +85,7 @@ export const Contact = () => {
 
                                         {/* Info */}
                                         <div className="text-center space-y-2 py-2 w-full border-t border-gray-300">
-                                            <p className="font-semibold text-gray-800 text-lg">{contact.name}</p>
+                                            <p className="font-semibold text-gray-800 sm:text-lg">{contact.name}</p>
                                             <p className="text-sm text-gray-600"><strong>इमेल:</strong> {contact.email}</p>
                                             <p className="text-sm text-gray-600"><strong>फोन:</strong> {contact.phone}</p>
 
@@ -106,7 +106,7 @@ export const Contact = () => {
                             />
                         </div>
                         <form
-                            className="space-y-6 bg-white rounded-2xl shadow-xl order-1 [@media(min-width:1050px)]:order-2  p-8 sm:p-8 md:p-10 w-full hover:shadow-2xl transition-transform duration-300 hover:-translate-y-2">
+                            className="text-sm  space-y-6 bg-white rounded-2xl shadow-xl order-1 [@media(min-width:1050px)]:order-2  p-8 sm:p-8 md:p-10 w-full hover:shadow-2xl transition-transform duration-300 hover:-translate-y-2">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                                     नाम
@@ -120,7 +120,7 @@ export const Contact = () => {
                             </div>
 
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="email" className="block font-medium text-gray-700">
                                     इमेल
                                 </label>
                                 <input
@@ -132,7 +132,7 @@ export const Contact = () => {
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="message" className="block font-medium text-gray-700">
                                     सन्देश
                                 </label>
                                 <textarea

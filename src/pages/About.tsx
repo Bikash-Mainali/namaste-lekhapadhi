@@ -1,28 +1,28 @@
 export const About= () => {
     return (
         <>
-            <section id="about-us" className="py-30 bg-gray-50">
+            <section id="about-us" className="py-20 sm:py-22 md:py-30 bg-gray-50">
                 <div className="max-w-10/12 mx-auto px-6">
-                    <h2 className="text-4xl font-extrabold text-gray-800 mb-30 text-center">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-15 sm:mb-22 md:mb-30 text-center">
                         हाम्रो बारेमा
                     </h2>
 
-                    <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                    <p className="sm:text-2xl text-gray-700 leading-relaxed mb-6">
                         स्वागत छ <span className="font-semibold">नमस्ते लेखापढी सेवा</span> मा, सम्पत्ति र कानुनी समाधानमा तपाईंको विश्वासयोग्य साझेदार।
                         हामी नेपालमा सम्पत्ति र कानुनी मामिलाहरू सम्हाल्ने व्यक्तिहरू, परिवारहरू र संस्थाहरूलाई भरपर्दो, पारदर्शी, र व्यावसायिक सेवाहरू प्रदान गर्नमा विशेषज्ञता राख्छौं।
                     </p>
 
-                    <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                    <p className="sm:text-2xl text-gray-700 leading-relaxed mb-6">
                         हाम्रो समर्पित टोलीमा अनुभवी कानुनी सल्लाहकारहरू, नापजोख विशेषज्ञहरू र प्रमाणित नोटरी पेशेवरहरू सामेल छन्, जसले जटिल प्रक्रियाहरूलाई सरल बनाउन कटिबद्ध छन्।
                         जग्गाको नाम स्थानान्तरणदेखि कानुनी मसौदा, नक्सा तयार गर्ने, विवाद समाधान र अदालतमा कागजात पेश गर्नुहुँदासम्म हामी ठ्याक्कै, प्रभावकारी र नेपालका कानुनी मापदण्डहरू अनुरुप सेवा प्रदान गर्छौं।
                     </p>
 
-                    <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                    <p className="sm:text-2xl text-gray-700 leading-relaxed mb-6">
                         हामी ईमान्दारी, जवाफदेहिता र ग्राहक सन्तुष्टिलाई प्राथमिकता दिन्छौं।
                         हाम्रो लक्ष्य तपाईंका सम्पत्ति सम्बन्धि निर्णयहरू सुरक्षित, नियमअनुरुप र चिन्तामुक्त रहुन सुनिश्चित गर्नु हो — किनकि हामी बुझ्छौं कि सम्पत्ति केवल कागजी प्रक्रिया होइन; यो तपाईंको लगानी, तपाईंको भविष्य र तपाईंको मनको शान्ति हो।
                     </p>
 
-                    <p className="text-2xl text-gray-700 leading-relaxed">
+                    <p className="sm:text-2xl text-gray-700 leading-relaxed">
                         दस्तावेजीकरण, कानुनी परामर्श, जग्गा नापजोख, मध्यमता वा नोटरी सेवाहरू मध्ये जुनसुकै सहयोग चाहियो भने, वर्षौंको अनुभवले समर्थित व्यक्तिगत सहयोगका लागि हामी यहाँ छौं।
                         <span className="font-semibold">तपाईंको विश्वास हाम्रा लागि आधार हो — र तपाईंको सफलतामै हाम्रो प्राथमिकता।</span>
                     </p>

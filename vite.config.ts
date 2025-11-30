@@ -25,8 +25,9 @@ export default defineConfig({
         minify: "esbuild", // default is 'esbuild'. You can also use 'terser' for more advanced minification.
         rollupOptions: {
             output: { // Customize the output file names
-                manualChunks(id: string) {
-                    if (id.includes('node_modules')) {
+                manualChunks(path: string) {
+                    if (path.includes('node_modules')) {
+                        console.log('vendor chunk', path);
                         return 'vendor'
                     }
                 },
