@@ -22,7 +22,7 @@ export default defineConfig({
         emptyOutDir: true, // Clean the output directory before each build
         chunkSizeWarningLimit: 400,
         target: "esnext", // fastest & modern browsers
-        minify: "esbuild",
+        minify: "esbuild", // default is 'esbuild'. You can also use 'terser' for more advanced minification.
         rollupOptions: {
             output: { // Customize the output file names
                 manualChunks(id: string) {
