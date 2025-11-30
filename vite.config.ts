@@ -17,4 +17,23 @@ export default defineConfig({
         open: true,
         port: 3001,
     },
+    build: {
+        sourcemap: false, // Disable source maps for production build. By default it's false, so this line is optional.
+        emptyOutDir: true, // Clean the output directory before each build
+        chunkSizeWarningLimit: 400,
+        target: "esnext", // fastest & modern browsers
+        minify: "esbuild",
+        rollupOptions: {
+            output: { // Customize the output file names
+                entryFileNames: "[name].js", // e.g., main.js
+                chunkFileNames: "[name].js", // e.g., vendor.js
+                assetFileNames: "[name].[ext]", // e.g., styles.css
+                manualChunks(id: string) {
+                    if (id.includes('node_modules')) {
+                        return 'vendor'
+                    }
+                },
+            },
+        },
+    },
 })

@@ -1,6 +1,7 @@
 import {StrictMode} from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+import './index1.css'
 import { RouterProvider } from 'react-router'
 import { index } from './routes'
 

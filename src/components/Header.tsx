@@ -9,7 +9,12 @@ type NavLinkItem = {
     link: string;
 };
 
-const brand = import.meta.env.BASE_URL + "images/brand.svg";
+console.log(import.meta.env.MODE)      // "development" | "production"
+console.log(import.meta.env.BASE_URL)  // "/"
+console.log( import.meta.env.VITE_API_URL)
+// true/false
+
+ const brand = import.meta.env.BASE_URL + "images/brand.svg";
 
 const navLinks: NavLinkItem[] = [
     { name: "गृहपृष्ठ", link: "/" },
@@ -65,7 +70,7 @@ const Header = () => {
     }, []);
 
     const getNavClass = ({ isActive }: { isActive: boolean }) =>
-        `${isActive ? "text-blue-600 font-bold" : "text-gray-700 hover:text-blue-600"} transition`;
+        `${isActive ? "gradient-text font-bold" : "text-gray-700 hover:text-blue-600"} transition`;
 
     return (
         <header className="fixed top-0 w-full z-50">

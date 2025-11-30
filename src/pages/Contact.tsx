@@ -2,8 +2,8 @@
 import {FaFacebookF} from "react-icons/fa";
 import {AnimatedBorder} from "../components/AnimatedBorder.tsx";
 import {FcGoogle} from "react-icons/fc";
-
-const BASE_URL = import.meta.env.BASE_URL;
+import Binod from '../assets/images/binod.png'
+import Madhab from '../assets/images/madhav.jpg'
 
 export const Contact = () => {
     const contactDetails = [
@@ -12,7 +12,7 @@ export const Contact = () => {
             name: "बिनोद कुमार मैनाली",
             phone: "9851069249",
             email: "binodkumar699@gmail.com",
-            imgLink: `${BASE_URL}images/binod.png`,
+            imgLink: `${Binod}`,
             alt: "बिनोद कुमार मैनाली"
         },
         {
@@ -20,7 +20,7 @@ export const Contact = () => {
             name: "माधव कुमार नेपाल",
             phone: "9843593698",
             email: "nmadhavkumar3@gmail.com",
-            imgLink: `${BASE_URL}images/madhav.jpg`,
+            imgLink: `${Madhab}`,
             alt: "माधव कुमार नेपाल"
         }
     ];
@@ -146,7 +146,7 @@ export const Contact = () => {
                             <div className="text-center">
                                 <button
                                     type="submit"
-                                    className="gradient-background text-white px-8 py-3 rounded-md hover:scale-105 transform transition-all duration-300 font-medium w-full sm:w-auto shadow-lg hover:shadow-xl"
+                                    className="gradient-background text-white px-8 py-3 rounded-md hover:scale-105 cursor-pointer transform transition-all duration-300 font-medium w-full sm:w-auto shadow-lg hover:shadow-xl"
                                 >
                                     सन्देश पठाउनुहोस्
                                 </button>

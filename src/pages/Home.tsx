@@ -1,12 +1,13 @@
 // src/pages/Home.tsx
 import {NavLink} from "react-router";
+import landImg from '../assets/images/home-bg.png'
 
 export const Home = () => {
     return (
         <>
             <section className="relative w-full h-screen" // full viewport height
                      style={{
-                         backgroundImage: `url(${import.meta.env.BASE_URL}images/land.png)`,
+                         backgroundImage: `url(${landImg})`,
                          backgroundSize: "cover",
                          backgroundPosition: "center",
                      }}

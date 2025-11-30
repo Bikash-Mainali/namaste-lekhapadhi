@@ -15,12 +15,12 @@ export default function Navbar() {
             <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
 
             <div
-                className="relative w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-12 p-6 sm:p-10 lg:p-20">
+                className="relative w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-12 p-6 sm:p-10 lg:p-20 text-center">
 
                 {/* Column 1 */}
-                <div className="flex flex-col gap-4 items-center ">
+                <div className="flex flex-col gap-4 order-4 sm:order-1 ">
                     <div className="space-y-3 text-sm sm:text-base">
-                        <h1 className="space-x-3 text-2xl sm:text-3xl font-bold">
+                        <h1 className="space-x-3 text-1xl sm:text-3xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">
                             नमस्ते लेखापढी & कानुनी सेवा </h1>
                         <p className="text-sm sm:text-base">उपयुक्त जग्गा फेला पार्न तपाईंको भरपर्दो साझेदार</p>
                         <p className="text-sm sm:text-base">© 2025 NLKS. All copy rights reserved.</p>
@@ -28,7 +28,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Column 2 */}
-                <div className="flex flex-col gap-4 items-center  flex-wrap ">
+                <div className="flex flex-col gap-4 flex-wrap order-2 ">
                     <div className="space-y-2 text-sm sm:text-base">
                         <h1 className="text-lg sm:text-2xl font-bold underline">महत्त्वपूर्ण लिंकहरू</h1>
                         <p className="hover:text-blue-300 underline">
@@ -49,12 +49,12 @@ export default function Navbar() {
                 </div>
 
                 {/* Column 3 */}
-                <div className="flex flex-col gap-4 items-center  flex-wrap ">
+                <div className="flex flex-col gap-4 flex-wrap order-3 ">
                     <div className="space-y-2 text-sm sm:text-base">
                         <h1 className="text-lg sm:text-2xl font-bold underline">सम्पर्क</h1>
                         <a
                             href="tel:+4733378901"
-                            className="flex gap-3 hover:underline flex-wrap hover:text-blue-300 underline"
+                            className="flex justify-center gap-3 hover:underline flex-wrap hover:text-blue-300 underline"
                         >
                             <span><FaPhone className="text-xl sm:text-2xl" aria-hidden="true"/></span>
                             <span>9851069249</span>
@@ -62,7 +62,7 @@ export default function Navbar() {
 
                         <a
                             href="https://maps.app.goo.gl/zr3DQud9C5zY3fTx6"
-                            className="flex gap-3 hover:underline flex-wrap hover:text-blue-300 underline"
+                            className="flex justify-center gap-3 hover:underline flex-wrap hover:text-blue-300 underline "
                         >
                             <span><ImLocation2 className="text-xl sm:text-2xl" aria-hidden="true"/></span>
                             <span>कलंकी, काठमाडौं</span>
@@ -71,7 +71,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Column 4 */}
-                <div className="flex flex-col gap-4 items-center  flex-wrap ">
+                <div className="flex flex-col gap-4 items-center flex-wrap order-3 sm:order-4 ">
                     <div className="flex space-x-4 sm:space-x-5 ">
                         {[
                             {id:1, icon: <FaFacebookF/>, color: "blue", href: "https://www.facebook.com/binodkumar.mainali"},

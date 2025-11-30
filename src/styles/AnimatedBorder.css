@@ -6,7 +6,7 @@
     content: '';
     position: absolute;
     inset: -22px;
-    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    background: linear-gradient(45deg, var(--gradientStart), var(--gradientMid1), var(--gradientMid2), var(--gradientMid3), var(--gradientEnd), var(--gradientStart));
     background-size: 400%;
     animation: steam 20s linear infinite;
     z-index: 0; /* behind .test */

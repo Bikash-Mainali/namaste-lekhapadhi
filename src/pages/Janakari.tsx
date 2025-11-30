@@ -1,3 +1,4 @@
+import JaggaNap from '../assets/images/jagga-nap.png'
 
 export function Janakari() {
     return (
@@ -110,7 +111,7 @@ export function Janakari() {
             </div>
             <div className="w-full max-w-3/4 mx-auto flex flex-col space-y-8 px-6 mt-20">
                 <section className="w-full text-left">
-                    <img src={`${import.meta.env.BASE_URL}/images/jagga-nap.png`} alt="jagga nap sambandhi jankari" className="h-[500px]"/>
+                    <img src={JaggaNap} alt="jagga nap sambandhi jankari" className="sm:h-[500px] sm:w-[900px] h-auto w-auto"/>
                 </section>
             </div>
             <section className="bg-blue-100 mt-20 p-6 rounded-lg shadow-lg text-center max-w-4xl mx-auto">

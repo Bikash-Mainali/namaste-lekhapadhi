@@ -13,7 +13,7 @@ const AnimatedWave: FC = () => {
             <style>
                 {`
           .path-0 {
-            animation: pathAnim0 4s linear infinite;
+            animation: pathAnim0 2s linear infinite;
           }
 
           @keyframes pathAnim0 {
