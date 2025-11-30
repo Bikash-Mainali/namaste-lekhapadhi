@@ -10,7 +10,7 @@ export default defineConfig({
                 plugins: [['babel-plugin-react-compiler']],
             },
         }),
-        tailwindcss(),
+        tailwindcss()
     ],
     base: "/namaste-lekhapadhi/",
     server: {
@@ -25,9 +25,6 @@ export default defineConfig({
         minify: "esbuild",
         rollupOptions: {
             output: { // Customize the output file names
-                entryFileNames: "[name].js", // e.g., main.js
-                chunkFileNames: "[name].js", // e.g., vendor.js
-                assetFileNames: "[name].[ext]", // e.g., styles.css
                 manualChunks(id: string) {
                     if (id.includes('node_modules')) {
                         return 'vendor'
