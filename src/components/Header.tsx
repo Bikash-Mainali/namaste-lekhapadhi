@@ -75,7 +75,7 @@ const Header = () => {
     return (
         <header className="fixed top-0 w-full z-50">
             <div
-                className="h-11 flex justify-end items-center px-4 sm:px-6 bg-gray-900 text-white text-sm sm:text-base">
+                className="h-11 flex justify-end items-center px-4 sm:px-6 bg-gray-900 text-white text-xs sm:text-sm">
                 <p>{dateTime}</p>
             </div>
 
