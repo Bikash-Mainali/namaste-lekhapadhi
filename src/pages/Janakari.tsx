@@ -2,12 +2,12 @@ import JaggaNap from '../assets/images/jagga-nap.png'
 
 export function Janakari() {
     return (
-        <section id="contact-us" className="py-30 text-base sm:text-lg">
-            <div className="max-w-4xl mx-auto px-6 text-center">
-                <h2 className="text-4xl font-extrabold text-gray-800 mb-6">
-                    जग्गा नाप सम्बन्धी जानकारी
+        <section id="jankari" className="py-20 sm:py-22 md:py-30 bg-gray-50">
+            <div className="max-w-10/12 mx-auto px-6 space-y-2">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800  text-center">
+                जग्गा नाप सम्बन्धी जानकारी
                 </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto mb-20 text-lg">
+                <p className="font-serif text-gray-600 max-w-2xl mx-auto mb-15 sm:mb-22 md:mb-30 text-xs sm:text-sm md:text-md leading-6 text-center tracking-wide">
                     नेपालमा जग्गाको सही नापी र नक्सा तयार पार्नु अत्यन्त आवश्यक छ। यसले
                     जग्गाको सही स्वामित्व सुनिश्चित गर्ने, विवादहरू कम गर्ने र कानुनी सुरक्षा दिने काम गर्छ।
                 </p>
@@ -114,16 +114,16 @@ export function Janakari() {
                     <img src={JaggaNap} alt="jagga nap sambandhi jankari" className="sm:h-[500px] sm:w-[900px] h-auto w-auto"/>
                 </section>
             </div>
-            <section className="bg-blue-100 mt-20 p-6 rounded-lg shadow-lg text-center max-w-4xl mx-auto">
-                <h2 className="text-2xl font-semibold mb-2 text-blue-700">
+            <section className="bg-blue-100 mt-20 p-6 rounded-lg shadow-lg text-center max-w-10/12 sm:max-w-4/5 md:max-w-3/5 mx-auto">
+                <h2 className="gradient-text text-xl sm:text-2xl font-semibold mb-2 text-blue-700">
                     सहयोगका लागि सम्पर्क गर्नुहोस्
                 </h2>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700 mb-4 text-sm sm:text-md md:text-lg">
                     तपाईंलाई जग्गा नापी सम्बन्धी कुनै सहयोग चाहिएको खण्डमा हामीलाई सम्पर्क गर्नुहोस्।
                 </p>
-                <p className="font-semibold text-lg">फोन: 9851069249</p>
-                <p className="font-semibold text-lg">इमेल: email@gmail.com</p>
-                <p className="font-semibold text-lg">स्थान: कालंकी, काठमाडौं</p>
+                <p className="font-semibold text-sm md:text-lg">फोन: 9851069249</p>
+                <p className="font-semibold text-sm md:text-lg">इमेल: email@gmail.com</p>
+                <p className="font-semibold text-sm md:text-lg">स्थान: कालंकी, काठमाडौं</p>
             </section>
         </section>
     );

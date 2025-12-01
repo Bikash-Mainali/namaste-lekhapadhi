@@ -70,12 +70,12 @@ export const Services: FC = () => {
     ];
 
     return (
-        <section id="services" className="py-30 bg-gray-50">
-            <div className="max-w-10/12 mx-auto px-6 text-center">
-                <h2 className="text-4xl font-extrabold text-gray-800 mb-6">
-                    हाम्रो सेवाहरू
+        <section id="service" className="py-20 sm:py-22 md:py-30 bg-gray-50">
+            <div className="max-w-10/12 mx-auto px-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 text-center">
+                हाम्रो सेवाहरू
                 </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto mb-30 text-lg">
+                <p className="text-gray-600 max-w-2xl mx-auto  mb-15 sm:mb-22 md:mb-30  text-xs sm:text-sm md:text-md leading-6 text-center tracking-wide">
                     हामी नेपालभर भर, पारदर्शिता र विशेषज्ञताको साथ व्यावसायिक कानुनी र कागजात सम्बन्धी सेवाहरू प्रदान गर्छौं।
                 </p>
 
