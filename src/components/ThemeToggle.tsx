@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import ToggleIcon from './icon/ToggleIcon.tsx'
+import {useState, useEffect} from 'react'
+import ToggleIcon from './toggle/ToggleIcon.tsx'
 
 const THEMES = {
     LIGHT: 'light',
@@ -7,6 +7,8 @@ const THEMES = {
 }
 
 export default function ThemeToggle() {
+    const [toggled, setToggled] = useState(false)
+
     const [theme, setTheme] = useState<string>(() => {
         // Try to read from localStorage first
         const stored = localStorage.getItem('theme')
@@ -24,12 +26,13 @@ export default function ThemeToggle() {
         const newTheme = theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT
         localStorage.setItem('theme', newTheme)
         setTheme(newTheme)
+        setToggled(!toggled);
     }
 
     return (
         <>
             <button onClick={onToggle}>
-                <ToggleIcon></ToggleIcon>
+                <ToggleIcon toggled={toggled}></ToggleIcon>
             </button>
         </>
     )
