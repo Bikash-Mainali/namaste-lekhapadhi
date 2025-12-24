@@ -116,7 +116,7 @@ const Header = () => {
             </nav>
 
             {menuOpen && (
-                <div className="flex bg-white flex-col space-y-4 px-4 sm:px-6 py-4 text-lg shadow-lg">
+                <div className="flex bg-white dark:bg-gray-300  flex-col space-y-4 px-4 sm:px-6 py-4 text-lg shadow-lg">
                     {navLinks.map((link) => (
                         <NavLink
                             key={link.name}
