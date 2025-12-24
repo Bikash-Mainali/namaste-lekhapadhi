@@ -83,17 +83,17 @@ const Header = () => {
     }, [])
 
     const getNavClass = ({ isActive }: { isActive: boolean }) => {
-        const style = localStorage.getItem('theme') != 'dark' ? 'gradient-text font-bold' : 'text-blue-700 font-bold'
-        return `${isActive ? style : 'text-black hover:text-blue-600'} transition`
+        const style = localStorage.getItem('theme') != 'dark' ? 'gradient-text font-bold' : 'text-cyan-500 font-bold'
+        return `${isActive ? style : 'text-black dark:text-white hover:text-blue-600'} transition`
     }
 
     return (
         <header className="fixed top-0 z-50 w-full">
-            <div className="bg-light-gradient dark:bg-dark-gradient flex h-11 items-center justify-end px-4 text-xs text-white sm:px-6 sm:text-sm">
+            <div className="bg-light-gradient bg-dark-gradient flex h-11 items-center justify-end px-4 text-xs text-white sm:px-6 sm:text-sm">
                 <ThemeToggle />
                 <p className="w-80 text-center">{dateTime}</p>
             </div>
-            <nav className="z-50 flex h-[var(--header-height)] flex-col items-center justify-between border-b border-gray-200 bg-white/80 px-4 py-2 shadow-sm backdrop-blur-md sm:px-6 dark:bg-gray-300 [@media(min-width:1100px)]:flex-row">
+            <nav className="z-50 flex h-[var(--header-height)] flex-col items-center justify-between border-b border-gray-200 dark:border-midnight-light1 bg-white/80 px-4 py-2 shadow-sm backdrop-blur-md sm:px-6 dark:bg-gray-800 [@media(min-width:1100px)]:flex-row">
                 <Link to="/" className="flex items-center space-x-3 self-auto [@media(max-width:1100px)]:self-start">
                     <img src={brand} height="60" width="60" alt="नमस्ते लोगो" className="object-contain" />
                     <span className="gradient-text py-2 text-2xl font-bold sm:text-3xl md:text-4xl">
@@ -111,7 +111,7 @@ const Header = () => {
 
                 <div className="absolute top-0 right-0 z-50 m-4 [@media(min-width:900px)]:hidden">
                     <button
-                        className="text-3xl text-gray-700 focus:outline-none [@media(min-width:900px)]:block"
+                        className="text-3xl text-gray-700 dark:text-white focus:outline-none [@media(min-width:900px)]:block"
                         onClick={() => setMenuOpen(!menuOpen)}
                         aria-label="menu"
                     >
@@ -121,7 +121,7 @@ const Header = () => {
             </nav>
 
             {menuOpen && (
-                <div className="flex flex-col space-y-4 bg-white px-4 py-4 text-lg shadow-lg sm:px-6 dark:bg-gray-300">
+                <div className="flex flex-col space-y-4 bg-white px-4 py-4 text-lg shadow-lg sm:px-6 dark:bg-gray-800">
                     {navLinks.map(link => (
                         <NavLink
                             key={link.name}

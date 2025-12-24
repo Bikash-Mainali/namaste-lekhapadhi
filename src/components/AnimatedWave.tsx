@@ -32,8 +32,8 @@ const AnimatedWave: FC = () => {
 
             <defs>
                 <linearGradient id="gradient" x1="50%" y1="100%" x2="50%" y2="0%">
-                    <stop offset="5%" stopColor="#155dfc" />
-                    <stop offset="95%" stopColor="#9810fa" />
+                    <stop offset="5%" style={{ stopColor: "var(--color-midnight-light1)" }} />
+                    <stop offset="95%" style={{ stopColor: "var(--color-midnight-light2)" }} />
                 </linearGradient>
             </defs>
 

@@ -1,4 +1,3 @@
-// src/components/Footer.tsx
 import AnimatedWave from './AnimatedWave.tsx'
 import { FaFacebookF, FaPhone } from 'react-icons/fa'
 import { FcGoogle } from 'react-icons/fc'

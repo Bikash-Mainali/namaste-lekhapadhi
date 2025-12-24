@@ -3,6 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
+    /*you can also use these variables under @theme*/
     --header-height: 100px;
     --gradientStart: #fb0094;
     --gradientMid1: #0000ff;
@@ -28,9 +29,15 @@
     background: #343236;
     background: linear-gradient(90deg, rgba(52, 50, 54, 1) 0%, rgba(17, 105, 168, 1) 50%, rgba(107, 128, 140, 1) 100%);
 }
+.dark {
+    --color-midnight-light1: #23547a;
+    --color-midnight-light2: #1d67a0;
+}
 
 @theme {
     --color-midnight: oklch(0.3065 0.0484 270.32);
+    --color-midnight-light1: #1079F4FF;
+    --color-midnight-light2: #71B5E3FF;
     --height-header: var(--header-height);
     --animate-background1: background-move1 ease infinite;
     --animate-border: gradient-xy 4s ease infinite;

@@ -10,7 +10,7 @@ export default function ThemeToggle() {
     const [toggled, setToggled] = useState(false)
 
     const [theme, setTheme] = useState<string>(() => {
-        // Try to read from localStorage first
+        // read from localStorage first
         const stored = localStorage.getItem('theme')
         if (stored === THEMES.LIGHT || stored === THEMES.DARK) return stored
 
