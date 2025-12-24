@@ -28,13 +28,13 @@
     transform: translateY(-50%);
 }
 
-.toggle-button.toggled {
+.toggle-button.dark {
     background-repeat: no-repeat;
     background-image: url('../../assets/images/dark.svg');
     background-size: cover;
 }
 
-.toggle-button.toggled .thumb {
+.toggle-button.dark .thumb {
     left: calc(70px - 32px);
     background-image: url('../../assets/images/moon.svg');
     background-size: cover;

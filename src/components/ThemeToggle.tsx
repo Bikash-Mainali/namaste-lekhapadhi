@@ -30,10 +30,8 @@ export default function ThemeToggle() {
     }
 
     return (
-        <>
-            <button onClick={onToggle}>
-                <ToggleIcon toggled={toggled}></ToggleIcon>
-            </button>
-        </>
+        <button onClick={onToggle}>
+            <ToggleIcon isLight={theme === THEMES.LIGHT}></ToggleIcon>
+        </button>
     )
 }
