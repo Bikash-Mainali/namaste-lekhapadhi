@@ -1,31 +1,29 @@
-import {useState, useEffect} from "react";
-import ToggleIcon from "./icon/ToggleIcon.tsx";
+import { useState, useEffect } from 'react'
+import ToggleIcon from './icon/ToggleIcon.tsx'
 
 const THEMES = {
-    LIGHT: "light",
-    DARK: "dark",
-};
+    LIGHT: 'light',
+    DARK: 'dark',
+}
 
 export default function ThemeToggle() {
     const [theme, setTheme] = useState<string>(() => {
         // Try to read from localStorage first
-        const stored = localStorage.getItem("theme");
-        if (stored === THEMES.LIGHT || stored === THEMES.DARK) return stored;
+        const stored = localStorage.getItem('theme')
+        if (stored === THEMES.LIGHT || stored === THEMES.DARK) return stored
 
         // Fallback to system preference
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? THEMES.DARK
-            : THEMES.LIGHT;
-    });
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? THEMES.DARK : THEMES.LIGHT
+    })
 
     useEffect(() => {
-        document.documentElement.classList.toggle("dark", theme === THEMES.DARK);
-    }, [theme]);
+        document.documentElement.classList.toggle('dark', theme === THEMES.DARK)
+    }, [theme])
 
     const onToggle = () => {
-        const newTheme = theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
-        localStorage.setItem("theme", newTheme);
-        setTheme(newTheme);
+        const newTheme = theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT
+        localStorage.setItem('theme', newTheme)
+        setTheme(newTheme)
     }
 
     return (
@@ -34,5 +32,5 @@ export default function ThemeToggle() {
                 <ToggleIcon></ToggleIcon>
             </button>
         </>
-    );
+    )
 }

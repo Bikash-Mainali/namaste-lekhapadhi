@@ -1,14 +1,14 @@
-import { type FC } from "react";
+import { type FC } from 'react'
 
 const AnimatedWave: FC = () => {
     return (
         <svg
-            width="100%"                 // Full width
-            height="200px"               // Fixed height
-            viewBox="0 0 1440 200"       // Scaled coordinate space
-            preserveAspectRatio="none"   // Stretch across width
+            width="100%" // Full width
+            height="200px" // Fixed height
+            viewBox="0 0 1440 200" // Scaled coordinate space
+            preserveAspectRatio="none" // Stretch across width
             xmlns="http://www.w3.org/2000/svg"
-            className="transition duration-300 ease-in-out delay-150"
+            className="transition delay-150 duration-300 ease-in-out"
         >
             <style>
                 {`
@@ -42,11 +42,11 @@ const AnimatedWave: FC = () => {
                 stroke="none"
                 fill="url(#gradient)"
                 fillOpacity={1}
-                className="transition-all duration-300 ease-in-out delay-150 path-0"
+                className="path-0 transition-all delay-150 duration-300 ease-in-out"
                 transform="rotate(-180 720 100)"
             />
         </svg>
-    );
-};
+    )
+}
 
-export default AnimatedWave;
+export default AnimatedWave

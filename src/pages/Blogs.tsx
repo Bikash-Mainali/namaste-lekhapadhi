@@ -1,13 +1,13 @@
-import {useMemo, useState} from 'react';
+import { useMemo, useState } from 'react'
 
 type Post = {
-    id: number;
-    title: string;
-    date: string;
-    excerpt: string;
-    href: string;
-    img: string;
-};
+    id: number
+    title: string
+    date: string
+    excerpt: string
+    href: string
+    img: string
+}
 
 const posts: Post[] = [
     {
@@ -15,7 +15,7 @@ const posts: Post[] = [
         title: 'नेपालमा शिक्षा सम्बन्धी कानुन',
         date: '७ नोभेम्बर, २०२५',
         excerpt:
-            "संविधानिक प्रावधानदेखि नियामक निकायदेखि शिक्षा क्षेत्रमा लागू हुने कानुनी ढाँचा र नियमहरू अन्वेषण गर्नुहोस्...",
+            'संविधानिक प्रावधानदेखि नियामक निकायदेखि शिक्षा क्षेत्रमा लागू हुने कानुनी ढाँचा र नियमहरू अन्वेषण गर्नुहोस्...',
         href: 'https://www.nepallawyer.com/blog/education-law-in-nepal',
         img: 'https://www.nepallawyer.com/storage/4087/conversions/Gemini_Generated_Image_sjyyrhsjyyrhsjyy-thumb.webp',
     },
@@ -24,7 +24,7 @@ const posts: Post[] = [
         title: 'नेपालमा नयाँ पासपोर्ट दर्ता प्रक्रिया',
         date: '४ नोभेम्बर, २०२५',
         excerpt:
-            "नेपालको MRP पासपोर्ट प्रणालीका लागि अनलाइन आवेदन, आवश्यक कागजात, शुल्क र प्रशोधन समयबारे जान्नुहोस्...",
+            'नेपालको MRP पासपोर्ट प्रणालीका लागि अनलाइन आवेदन, आवश्यक कागजात, शुल्क र प्रशोधन समयबारे जान्नुहोस्...',
         href: 'https://www.nepallawyer.com/blog/new-passport-registration-process-in-nepal',
         img: 'https://www.nepallawyer.com/storage/4085/conversions/Gemini_Generated_Image_ag1vh7ag1vh7ag1v-thumb.webp',
     },
@@ -60,7 +60,7 @@ const posts: Post[] = [
         title: 'NRN का लागि सम्पत्ति कर (नेपाल)',
         date: '२५ अक्टोबर, २०२५',
         excerpt:
-            "NRN हरूका लागि सम्पत्ति कर सम्बन्धी दायित्वहरू र नेपालका कर सम्बन्धी प्रावधानहरूको संक्षिप्त परिचय...",
+            'NRN हरूका लागि सम्पत्ति कर सम्बन्धी दायित्वहरू र नेपालका कर सम्बन्धी प्रावधानहरूको संक्षिप्त परिचय...',
         href: 'https://www.nepallawyer.com/blog/property-tax-for-nrn-in-nepal',
         img: 'https://www.nepallawyer.com/storage/4079/conversions/Gemini_Generated_Image_k65zl9k65zl9k65z-thumb.webp',
     },
@@ -96,7 +96,7 @@ const posts: Post[] = [
         title: 'NRN का लागि सम्पत्ति कर (नेपाल)',
         date: '२५ अक्टोबर, २०२५',
         excerpt:
-            "NRN हरूका लागि सम्पत्ति कर सम्बन्धी दायित्वहरू र नेपालका कर सम्बन्धी प्रावधानहरूको संक्षिप्त परिचय...",
+            'NRN हरूका लागि सम्पत्ति कर सम्बन्धी दायित्वहरू र नेपालका कर सम्बन्धी प्रावधानहरूको संक्षिप्त परिचय...',
         href: 'https://www.nepallawyer.com/blog/property-tax-for-nrn-in-nepal',
         img: 'https://www.nepallawyer.com/storage/4079/conversions/Gemini_Generated_Image_k65zl9k65zl9k65z-thumb.webp',
     },
@@ -105,7 +105,7 @@ const posts: Post[] = [
         title: 'NRN का लागि सम्पत्ति कर (नेपाल)',
         date: '२५ अक्टोबर, २०२५',
         excerpt:
-            "NRN हरूका लागि सम्पत्ति कर सम्बन्धी दायित्वहरू र नेपालका कर सम्बन्धी प्रावधानहरूको संक्षिप्त परिचय...",
+            'NRN हरूका लागि सम्पत्ति कर सम्बन्धी दायित्वहरू र नेपालका कर सम्बन्धी प्रावधानहरूको संक्षिप्त परिचय...',
         href: 'https://www.nepallawyer.com/blog/property-tax-for-nrn-in-nepal',
         img: 'https://www.nepallawyer.com/storage/4079/conversions/Gemini_Generated_Image_k65zl9k65zl9k65z-thumb.webp',
     },
@@ -141,68 +141,68 @@ const posts: Post[] = [
         title: 'NRN का लागि सम्पत्ति कर (नेपाल)',
         date: '२५ अक्टोबर, २०२५',
         excerpt:
-            "NRN हरूका लागि सम्पत्ति कर सम्बन्धी दायित्वहरू र नेपालका कर सम्बन्धी प्रावधानहरूको संक्षिप्त परिचय...",
+            'NRN हरूका लागि सम्पत्ति कर सम्बन्धी दायित्वहरू र नेपालका कर सम्बन्धी प्रावधानहरूको संक्षिप्त परिचय...',
         href: 'https://www.nepallawyer.com/blog/property-tax-for-nrn-in-nepal',
         img: 'https://www.nepallawyer.com/storage/4079/conversions/Gemini_Generated_Image_k65zl9k65zl9k65z-thumb.webp',
-    }
-];
+    },
+]
 
 export const Blogs = () => {
-    const [currentPage, setCurrentPage] = useState<number>(1);
-    const [postsPerPage] = useState<number>(10); // change as needed
+    const [currentPage, setCurrentPage] = useState<number>(1)
+    const [postsPerPage] = useState<number>(10) // change as needed
 
-    const totalPages = Math.ceil(posts.length / postsPerPage);
+    const totalPages = Math.ceil(posts.length / postsPerPage)
 
     const visiblePosts = useMemo(() => {
-        const start = (currentPage - 1) * postsPerPage;
-        return posts.slice(start, start + postsPerPage);
-    }, [currentPage, postsPerPage]);
+        const start = (currentPage - 1) * postsPerPage
+        return posts.slice(start, start + postsPerPage)
+    }, [currentPage, postsPerPage])
 
     const goToPage = (page: number) => {
-        if (page < 1 || page > totalPages) return;
-        setCurrentPage(page);
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    };
+        if (page < 1 || page > totalPages) return
+        setCurrentPage(page)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
 
     const renderPageButtons = () => {
         if (totalPages <= 9) {
-            return Array.from({length: totalPages}, (_, i) => i + 1);
+            return Array.from({ length: totalPages }, (_, i) => i + 1)
         }
 
-        const pages: (number | string)[] = [];
-        const left = Math.max(2, currentPage - 2);
-        const right = Math.min(totalPages - 1, currentPage + 2);
+        const pages: (number | string)[] = []
+        const left = Math.max(2, currentPage - 2)
+        const right = Math.min(totalPages - 1, currentPage + 2)
 
-        pages.push(1);
-        if (left > 2) pages.push('...');
-        for (let p = left; p <= right; p++) pages.push(p);
-        if (right < totalPages - 1) pages.push('...');
-        pages.push(totalPages);
+        pages.push(1)
+        if (left > 2) pages.push('...')
+        for (let p = left; p <= right; p++) pages.push(p)
+        if (right < totalPages - 1) pages.push('...')
+        pages.push(totalPages)
 
-        return pages;
-    };
+        return pages
+    }
 
     return (
-        <section id="blogs" className="py-20 sm:py-22 md:py-30 bg-gray-50 dark:bg-gray-950">
-            <div className="max-w-10/12 mx-auto px-6">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 dark:text-white mb-15 sm:mb-22 md:mb-30 text-center">
+        <section id="blogs" className="bg-gray-50 py-20 sm:py-22 md:py-30 dark:bg-gray-950">
+            <div className="mx-auto max-w-10/12 px-6">
+                <h2 className="mb-15 text-center text-2xl font-extrabold text-gray-800 sm:mb-22 sm:text-3xl md:mb-30 md:text-4xl dark:text-white">
                     ब्लगहरू
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                    {visiblePosts.map((post) => (
+                <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+                    {visiblePosts.map(post => (
                         <article
                             key={post.id}
-                            className="shadow-sm rounded overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-white dark:bg-gray-800"
+                            className="overflow-hidden rounded bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl dark:bg-gray-800"
                         >
                             <a href={post.href}>
-                                <img className="w-full h-56 object-cover" alt={post.title} src={post.img} />
+                                <img className="h-56 w-full object-cover" alt={post.title} src={post.img} />
                             </a>
 
                             <div className="p-4">
-                                <h5 className="text-lg font-medium mb-2">
+                                <h5 className="mb-2 text-lg font-medium">
                                     <a
-                                        className="text-gray-900 dark:text-white hover:text-blue-600 transition-colors"
+                                        className="text-gray-900 transition-colors hover:text-blue-600 dark:text-white"
                                         href={post.href}
                                         title={post.title}
                                     >
@@ -210,19 +210,22 @@ export const Blogs = () => {
                                     </a>
                                 </h5>
 
-                                <ul className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                                <ul className="mb-3 text-sm text-gray-500 dark:text-gray-400">
                                     <li>{post.date}</li>
                                 </ul>
 
-                                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                                <p className="mb-4 text-gray-700 dark:text-gray-300">
                                     {post.excerpt}
-                                    <a className="text-blue-600 dark:text-gray-300 hover:underline ml-1" href={post.href}>
+                                    <a
+                                        className="ml-1 text-blue-600 hover:underline dark:text-gray-300"
+                                        href={post.href}
+                                    >
                                         [...]
                                     </a>
                                 </p>
 
                                 <a
-                                    className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-white inline-flex items-center float-right transition-colors"
+                                    className="float-right inline-flex items-center text-sm text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-white"
                                     href={post.href}
                                 >
                                     <i className="fa fa-angle-double-right mr-1" /> थप पढ्नुहोस्
@@ -241,7 +244,7 @@ export const Blogs = () => {
                                 <button
                                     onClick={() => goToPage(currentPage - 1)}
                                     disabled={currentPage === 1}
-                                    className="px-3 py-2 rounded-xl  dark:text-white bg-white/70 dark:bg-gray-700/70 backdrop-blur border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md hover:bg-white dark:hover:bg-gray-700 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+                                    className="rounded-xl border border-gray-200 bg-white/70 px-3 py-2 shadow-sm backdrop-blur transition-all hover:bg-white hover:shadow-md disabled:cursor-not-allowed disabled:opacity-40 dark:border-gray-600 dark:bg-gray-700/70 dark:text-white dark:hover:bg-gray-700"
                                     aria-label="Previous Page"
                                 >
                                     ‹
@@ -250,16 +253,16 @@ export const Blogs = () => {
 
                             {/* Page numbers */}
                             {renderPageButtons().map((p, idx) =>
-                                typeof p === "number" ? (
+                                typeof p === 'number' ? (
                                     <li key={idx}>
                                         <button
                                             onClick={() => goToPage(p)}
-                                            className={`px-4 py-2 rounded-xl transition-all font-medium ${
+                                            className={`rounded-xl px-4 py-2 font-medium transition-all ${
                                                 p === currentPage
-                                                    ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-xl scale-110"
-                                                    : "bg-white/70 dark:bg-gray-700/70 backdrop-blur border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 hover:shadow-md"
+                                                    ? 'scale-110 bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-xl'
+                                                    : 'border border-gray-200 bg-white/70 text-gray-700 backdrop-blur hover:bg-white hover:shadow-md dark:border-gray-600 dark:bg-gray-700/70 dark:text-gray-200 dark:hover:bg-gray-700'
                                             }`}
-                                            aria-current={p === currentPage ? "page" : undefined}
+                                            aria-current={p === currentPage ? 'page' : undefined}
                                         >
                                             {p}
                                         </button>
@@ -276,7 +279,7 @@ export const Blogs = () => {
                                 <button
                                     onClick={() => goToPage(currentPage + 1)}
                                     disabled={currentPage === totalPages}
-                                    className="px-3 py-2 dark:text-white rounded-xl bg-white/70 dark:bg-gray-700/70 backdrop-blur border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md hover:bg-white dark:hover:bg-gray-700 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+                                    className="rounded-xl border border-gray-200 bg-white/70 px-3 py-2 shadow-sm backdrop-blur transition-all hover:bg-white hover:shadow-md disabled:cursor-not-allowed disabled:opacity-40 dark:border-gray-600 dark:bg-gray-700/70 dark:text-white dark:hover:bg-gray-700"
                                     aria-label="Next Page"
                                 >
                                     ›
@@ -287,7 +290,7 @@ export const Blogs = () => {
                 </div>
             </div>
         </section>
-    );
-};
+    )
+}
 
-export default Blogs;
+export default Blogs

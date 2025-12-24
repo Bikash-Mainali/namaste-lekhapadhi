@@ -2,11 +2,20 @@
     position: relative;
 }
 
-.animate-parent-element::before, .animate-parent-element::after {
+.animate-parent-element::before,
+.animate-parent-element::after {
     content: '';
     position: absolute;
     inset: -22px;
-    background: linear-gradient(45deg, var(--gradientStart), var(--gradientMid1), var(--gradientMid2), var(--gradientMid3), var(--gradientEnd), var(--gradientStart));
+    background: linear-gradient(
+        45deg,
+        var(--gradientStart),
+        var(--gradientMid1),
+        var(--gradientMid2),
+        var(--gradientMid3),
+        var(--gradientEnd),
+        var(--gradientStart)
+    );
     background-size: 400%;
     animation: steam 20s linear infinite;
     z-index: 0; /* behind .test */
