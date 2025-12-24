@@ -3,6 +3,8 @@ import {useEffect, useState} from "react";
 import {Link, NavLink} from "react-router-dom";
 import NepaliDate from "nepali-date-converter";
 import {HiMenu, HiX} from "react-icons/hi";
+import ThemeToggle from "./ThemeToggle.tsx";
+import ToggleIcon from "./icon/ToggleIcon.tsx";
 
 type NavLinkItem = {
     name: string;
@@ -69,18 +71,19 @@ const Header = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const getNavClass = ({isActive}: { isActive: boolean }) =>
-        `${isActive ? "gradient-text font-bold" : "text-gray-700 hover:text-blue-600"} transition`;
+    const getNavClass = ({isActive}: { isActive: boolean }) => {
+        const style = localStorage.getItem('theme') != 'dark' ? 'gradient-text font-bold' : 'text-blue-700 font-bold'
+        return `${isActive ? style : "text-black hover:text-blue-600"} transition`
+    };
 
     return (
         <header className="fixed top-0 w-full z-50">
-            <div
-                className="h-11 flex justify-end items-center px-4 sm:px-6 bg-gray-900 text-white text-xs sm:text-sm">
-                <p>{dateTime}</p>
+            <div className="h-11 flex justify-end items-center px-4 sm:px-6 bg-light-gradient dark:bg-dark-gradient text-white text-xs sm:text-sm">
+                <ThemeToggle />
+                <p className="w-80 text-center">{dateTime}</p>
             </div>
-
             <nav
-                className="flex flex-col [@media(min-width:1100px)]:flex-row items-center justify-between px-4 py-2 sm:px-6 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 h-[var(--header-height)] z-50">
+                className="flex flex-col [@media(min-width:1100px)]:flex-row items-center justify-between px-4 py-2 sm:px-6 bg-white/80 dark:bg-gray-300 backdrop-blur-md shadow-sm border-b border-gray-200 h-[var(--header-height)] z-50">
                 <Link to="/" className="flex self-auto [@media(max-width:1100px)]:self-start items-center space-x-3">
                     <img src={brand} height="60" width="60" alt="नमस्ते लोगो" className="object-contain"/>
                     <span

@@ -87,16 +87,16 @@ export function Gallery() {
     };
 
     return (
-        <section id="gallery" className="py-20 sm:py-22 md:py-30 bg-gray-50">
+        <section id="gallery" className="py-20 sm:py-22 md:py-30 bg-gray-50 dark:bg-gray-950">
             <div className="max-w-10/12 mx-auto px-6">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-15 sm:mb-22 md:mb-30 text-center">
+                <h2 className="text-2xl dark:text-white sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-15 sm:mb-22 md:mb-30 text-center">
                 ग्यालरी
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                     {visiblePosts.map((post) => (
                         <div
                             key={post.id}
-                            className="flex flex-col bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-transform duration-300 hover:-translate-y-1"
+                            className="flex flex-col bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-transform duration-300 hover:-translate-y-1"
                         >
                             <button
                                 onClick={() => setSelectedImg(post.img)}
@@ -109,7 +109,7 @@ export function Gallery() {
                                     className="w-full h-full object-cover block"
                                 />
                             </button>
-                            <div className="px-3 py-2 text-sm sm:text-base text-center text-gray-700 border-t">
+                            <div className="px-3 py-2 text-sm sm:text-base text-center text-gray-700 dark:text-white border-t">
                                 {post.title}
                             </div>
                         </div>
@@ -124,7 +124,7 @@ export function Gallery() {
                                 <button
                                     onClick={() => goToPage(currentPage - 1)}
                                     disabled={currentPage === 1}
-                                    className="px-3 py-2 rounded-lg bg-white/80 backdrop-blur border border-gray-200 shadow-sm hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed"
+                                    className="px-3 py-2 rounded-xl  dark:text-white bg-white/70 dark:bg-gray-700/70 backdrop-blur border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md hover:bg-white dark:hover:bg-gray-700 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
                                     aria-label="अघिल्लो पृष्ठ"
                                 >
                                     ‹
@@ -155,7 +155,7 @@ export function Gallery() {
                                 <button
                                     onClick={() => goToPage(currentPage + 1)}
                                     disabled={currentPage === totalPages}
-                                    className="px-3 py-2 rounded-lg bg-white/80 backdrop-blur border border-gray-200 shadow-sm hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed"
+                                    className="px-3 py-2 dark:text-white rounded-xl bg-white/70 dark:bg-gray-700/70 backdrop-blur border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md hover:bg-white dark:hover:bg-gray-700 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
                                     aria-label="अर्को पृष्ठ"
                                 >
                                     ›

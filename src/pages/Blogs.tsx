@@ -183,57 +183,66 @@ export const Blogs = () => {
     };
 
     return (
-        <section id="blogs" className="py-20 sm:py-22 md:py-30 bg-gray-50">
+        <section id="blogs" className="py-20 sm:py-22 md:py-30 bg-gray-50 dark:bg-gray-950">
             <div className="max-w-10/12 mx-auto px-6">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-15 sm:mb-22 md:mb-30 text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 dark:text-white mb-15 sm:mb-22 md:mb-30 text-center">
                     ब्लगहरू
                 </h2>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                     {visiblePosts.map((post) => (
-                        <article key={post.id}
-                                 className="shadow-sm rounded overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-6">
-                            <div className="post-thumb">
-                                <a href={post.href}>
-                                    <img className="w-full h-56 object-cover" alt={post.title} src={post.img}/>
-                                </a>
-                            </div>
+                        <article
+                            key={post.id}
+                            className="shadow-sm rounded overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-white dark:bg-gray-800"
+                        >
+                            <a href={post.href}>
+                                <img className="w-full h-56 object-cover" alt={post.title} src={post.img} />
+                            </a>
+
                             <div className="p-4">
                                 <h5 className="text-lg font-medium mb-2">
-                                    <a className="text-gray-900 hover:text-blue-600" href={post.href}
-                                       title={post.title}>
+                                    <a
+                                        className="text-gray-900 dark:text-white hover:text-blue-600 transition-colors"
+                                        href={post.href}
+                                        title={post.title}
+                                    >
                                         {post.title}
                                     </a>
                                 </h5>
-                                <ul className="text-sm text-gray-500 mb-3">
+
+                                <ul className="text-sm text-gray-500 dark:text-gray-400 mb-3">
                                     <li>{post.date}</li>
                                 </ul>
-                                <p className="text-gray-700 mb-4">
+
+                                <p className="text-gray-700 dark:text-gray-300 mb-4">
                                     {post.excerpt}
-                                    <a className="text-blue-600 hover:underline ml-1" href={post.href}>
+                                    <a className="text-blue-600 dark:text-gray-300 hover:underline ml-1" href={post.href}>
                                         [...]
                                     </a>
                                 </p>
-                                <a className="text-sm text-gray-500 hover:text-gray-700 inline-flex items-center float-right"
-                                   href={post.href}>
-                                    <i className="fa fa-angle-double-right mr-1 p-5"/> थप पढ्नुहोस्
+
+                                <a
+                                    className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-white inline-flex items-center float-right transition-colors"
+                                    href={post.href}
+                                >
+                                    <i className="fa fa-angle-double-right mr-1" /> थप पढ्नुहोस्
                                 </a>
                             </div>
                         </article>
                     ))}
                 </div>
 
+                {/* Pagination */}
                 <div className="mt-8 flex justify-center">
                     <nav aria-label="Pagination">
                         <ul className="flex items-center gap-2 text-sm select-none">
-
                             {/* Prev */}
                             <li>
                                 <button
                                     onClick={() => goToPage(currentPage - 1)}
                                     disabled={currentPage === 1}
-                                    className="px-3 py-2 rounded-xl bg-white/70 backdrop-blur border border-gray-200
-                       shadow-sm hover:shadow-md hover:bg-white transition-all
-                       disabled:opacity-40 disabled:cursor-not-allowed"
+                                    className="px-3 py-2 rounded-xl  dark:text-white bg-white/70 dark:bg-gray-700/70 backdrop-blur border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md hover:bg-white dark:hover:bg-gray-700 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+                                    aria-label="Previous Page"
                                 >
                                     ‹
                                 </button>
@@ -245,18 +254,20 @@ export const Blogs = () => {
                                     <li key={idx}>
                                         <button
                                             onClick={() => goToPage(p)}
-                                            className={`px-4 py-2 rounded-xl transition-all font-medium
-                        ${
+                                            className={`px-4 py-2 rounded-xl transition-all font-medium ${
                                                 p === currentPage
                                                     ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-xl scale-110"
-                                                    : "bg-white/70 backdrop-blur border border-gray-200 text-gray-700 hover:bg-white hover:shadow-md"
+                                                    : "bg-white/70 dark:bg-gray-700/70 backdrop-blur border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 hover:shadow-md"
                                             }`}
+                                            aria-current={p === currentPage ? "page" : undefined}
                                         >
                                             {p}
                                         </button>
                                     </li>
                                 ) : (
-                                    <li key={idx} className="px-3 text-gray-400">…</li>
+                                    <li key={idx} className="px-3 text-gray-400 dark:text-gray-500">
+                                        …
+                                    </li>
                                 )
                             )}
 
@@ -265,14 +276,12 @@ export const Blogs = () => {
                                 <button
                                     onClick={() => goToPage(currentPage + 1)}
                                     disabled={currentPage === totalPages}
-                                    className="px-3 py-2 rounded-xl bg-white/70 backdrop-blur border border-gray-200
-                       shadow-sm hover:shadow-md hover:bg-white transition-all
-                       disabled:opacity-40 disabled:cursor-not-allowed"
+                                    className="px-3 py-2 dark:text-white rounded-xl bg-white/70 dark:bg-gray-700/70 backdrop-blur border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md hover:bg-white dark:hover:bg-gray-700 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+                                    aria-label="Next Page"
                                 >
                                     ›
                                 </button>
                             </li>
-
                         </ul>
                     </nav>
                 </div>

@@ -1,0 +1,40 @@
+.toggle-button {
+    margin: 10px;
+    height: 35px;
+    width: 70px;
+    border-radius: 99px;
+    position: relative;
+    transition: background-color 0.1s ease, border-color 0.2s;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid gray;
+    background-image: url("light.svg");
+}
+
+.toggle-button .thumb {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 99px;
+    background-image: url("sun.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 50%;
+    left: 3px;
+    transition: left 0.15s ease;
+    transform: translateY(-50%);
+}
+
+.toggle-button.toggled {
+    background-repeat: no-repeat;
+    background-image: url("dark.svg");
+    background-size: cover;
+}
+
+.toggle-button.toggled .thumb {
+    left: calc(70px - 32px);
+    background-image: url("moon.svg");
+    background-size: cover;
+}

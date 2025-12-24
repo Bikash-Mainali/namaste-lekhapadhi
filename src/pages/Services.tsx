@@ -1,4 +1,3 @@
-// src/pages/Services.tsx
 import type {FC, JSX} from "react";
 import {FaHome, FaBalanceScale, FaFileAlt, FaMapMarkedAlt, FaPenFancy, FaUserTie, FaGavel, FaHandshake} from "react-icons/fa";
 interface ServiceProperties {
@@ -70,23 +69,23 @@ export const Services: FC = () => {
     ];
 
     return (
-        <section id="service" className="py-20 sm:py-22 md:py-30 bg-gray-50">
+        <section id="service" className="py-20 sm:py-22 md:py-30 bg-gray-50 dark:bg-gray-950">
             <div className="max-w-10/12 mx-auto px-6">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 dark:text-white text-center">
                 हाम्रो सेवाहरू
                 </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto  mb-15 sm:mb-22 md:mb-30  text-xs sm:text-sm md:text-md leading-6 text-center tracking-wide">
+                <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto  mb-15 sm:mb-22 md:mb-30  text-xs sm:text-sm md:text-md leading-6 text-center tracking-wide">
                     हामी नेपालभर भर, पारदर्शिता र विशेषज्ञताको साथ व्यावसायिक कानुनी र कागजात सम्बन्धी सेवाहरू प्रदान गर्छौं।
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center ">
                     {services.map((service) => (
-                        <div key={service.id} className="shadow-md shadow-gray-400 hover:shadow-xl rounded-xl p-8 transition-transform hover:scale-120 duration-500 ">
+                        <div key={service.id} className="shadow-md dark:bg-gray-800 dark:border dark:shadow-xs shadow-gray-400  dark:hover:shadow-sm hover:shadow-xl rounded-xl p-8 transition-transform hover:scale-120 duration-500 ">
                             <div className="text-3xl">
                                 {service.icon}
                             </div>
-                            <h3 className="text-3xl font-semibold mb-3 text-gray-800">{service.title}</h3>
-                            <p className="text-gray-600 text-xl">
+                            <h3 className="text-3xl font-semibold mb-3 text-gray-800 dark:text-white">{service.title}</h3>
+                            <p className="text-gray-600 dark:text-white text-xl">
                                 {service.description}
                             </p>
                         </div>

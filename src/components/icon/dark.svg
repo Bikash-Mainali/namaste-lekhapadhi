@@ -1,0 +1,16 @@
+<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <!-- background -->
+    <rect width="20" height="20" fill="#0b0c14"/>
+
+    <!-- curved bands (right side) -->
+    <circle cx="26" cy="10" r="14" fill="#1c1e2a"/>
+    <circle cx="26" cy="10" r="10" fill="#2a2c38"/>
+
+    <!-- small dots -->
+    <circle cx="6" cy="8" r="0.8" fill="#ffffff"/>
+    <!-- tiny diamond stars -->
+    <polygon points="4,3 5,4 4,5 3,4" fill="#ffffff"/>
+    <circle cx="8" cy="5" r="0.8" fill="#ffffff"/>
+    <polygon points="10,9 11,10 10,11 9,10" fill="#ffffff"/>
+
+</svg>

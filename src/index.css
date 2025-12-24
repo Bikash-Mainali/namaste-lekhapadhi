@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
     --header-height: 100px;
     --gradientStart: #fb0094;
@@ -17,7 +19,18 @@
     @apply bg-gradient-to-r from-blue-600 to-cyan-400;
 }
 
+.bg-light-gradient {
+    background: #ffd4d4;
+    background: linear-gradient(12deg, rgba(255, 212, 212, 1) 0%, rgba(109, 181, 232, 1) 55%);
+}
+
+.dark .bg-dark-gradient {
+    background: #343236;
+    background: linear-gradient(90deg, rgba(52, 50, 54, 1) 0%, rgba(17, 105, 168, 1) 50%, rgba(107, 128, 140, 1) 100%);
+}
+
 @theme {
+    --color-midnight: oklch(0.3065 0.0484 270.32);
     --height-header: var(--header-height);
     --animate-background1: background-move1 ease infinite;
     --animate-border: gradient-xy 4s ease infinite;
