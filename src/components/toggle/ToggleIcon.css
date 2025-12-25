@@ -24,7 +24,7 @@
     background-size: cover;
     top: 50%;
     left: 3px;
-    transition: left 0.15s ease;
+    transition: left 0.50s ease;
     transform: translateY(-50%);
 }
 
