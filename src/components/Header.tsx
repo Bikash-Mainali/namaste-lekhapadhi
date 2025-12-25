@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import NepaliDate from 'nepali-date-converter'
 import { HiMenu, HiX } from 'react-icons/hi'
 import ThemeToggle from './ThemeToggle.tsx'
 import { useTranslation } from 'react-i18next'
+import { getNepaliDateShortcut, getEnglishDateShortcut } from '../utils/date.ts'
 
 type NavLinkItem = {
     name: string
@@ -16,78 +16,35 @@ console.log('base url', import.meta.env.BASE_URL)
 const brand = import.meta.env.BASE_URL + 'images/brand.svg'
 
 const navLinks: NavLinkItem[] = [
-    { name: 'गृहपृष्ठ', link: '/' },
-    { name: 'हाम्रो बारे', link: '/about' },
-    { name: 'सेवाहरू', link: '/services' },
-    { name: 'जानकारी', link: '/janakari' },
-    { name: 'ब्लगहरू', link: '/blogs' },
-    { name: 'फोटो ग्यालरी', link: '/gallery' },
-    { name: 'सम्पर्क', link: '/contact' },
+    { name: 'home', link: '/' },
+    { name: 'about', link: '/about' },
+    { name: 'service', link: '/services' },
+    { name: 'info', link: '/janakari' },
+    { name: 'blog', link: '/blogs' },
+    { name: 'gallery', link: '/gallery' },
+    { name: 'contact', link: '/contact' },
 ]
 
-export function Header() {
-    const [menuOpen, setMenuOpen] = useState(false)
+export default function Header() {
     const { t, i18n } = useTranslation()
-
-    function toNepaliDigits(num: number | string) {
-        const nepaliNums = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९']
-        return num.toString().replace(/\d/g, d => nepaliNums[parseInt(d)])
-    }
-
-    function getNepalTimeNepali() {
-        const now = new Date()
-        const nptTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kathmandu' }))
-        const hours = nptTime.getHours()
-        const minutes = String(nptTime.getMinutes()).padStart(2, '0')
-        const seconds = String(nptTime.getSeconds()).padStart(2, '0')
-
-        let period = 'बिहान'
-        if (hours >= 12) period = 'दिउँसो'
-        if (hours >= 16) period = 'साँझ'
-        if (hours >= 19) period = 'बेलुका'
-
-        const hour12 = hours % 12 || 12
-        return `${period} ${toNepaliDigits(hour12)}:${toNepaliDigits(minutes)}:${toNepaliDigits(seconds)}`
-    }
-
-    function getNepaliDateShortcut(): string {
-        const date = new NepaliDate()
-        const year = date.getYear()
-        const month = date.getMonth()
-        const day = date.getDate()
-
-        const nepaliWeekdays = ['आइतबार', 'सोमबार', 'मंगलबार', 'बुधबार', 'बिहीबार', 'शुक्रबार', 'शनिबार']
-        const nepaliMonths = [
-            'बैशाख',
-            'जेठ',
-            'असार',
-            'श्रावण',
-            'भाद्र',
-            'आश्विन',
-            'कार्तिक',
-            'मंसिर',
-            'पौष',
-            'माघ',
-            'फाल्गुण',
-            'चैत्र',
-        ]
-
-        return `${nepaliMonths[month]} ${toNepaliDigits(day)}, ${toNepaliDigits(year)}, ${nepaliWeekdays[date.getDay()]}, ${getNepalTimeNepali()}`
-    }
-
-    const [dateTime, setDateTime] = useState(getNepaliDateShortcut())
-
+    const currentLang = i18n.language ?? 'en'
+    const [menuOpen, setMenuOpen] = useState(false)
+    const [dateTime, setDateTime] = useState(() => {
+        return currentLang === 'np' ? getNepaliDateShortcut() : getEnglishDateShortcut()
+    })
     useEffect(() => {
-        const timer = setInterval(() => setDateTime(getNepaliDateShortcut()), 1000)
+        const changeDateTimeImmediately = () => {
+            setDateTime(currentLang === 'np' ? getNepaliDateShortcut() : getEnglishDateShortcut())
+        }
+        changeDateTimeImmediately()
+        const timer = setInterval(changeDateTimeImmediately, 1000)
         return () => clearInterval(timer)
-    }, [])
+    }, [currentLang])
 
     const getNavClass = ({ isActive }: { isActive: boolean }) => {
         const style = localStorage.getItem('theme') != 'dark' ? 'gradient-text font-bold' : 'text-cyan-500 font-bold'
         return `${isActive ? style : 'text-black dark:text-white hover:text-blue-600'} transition`
     }
-
-    const currentLang = i18n.language ?? 'en'
 
     const toggleLanguage = () => {
         i18n.changeLanguage(currentLang === 'en' ? 'np' : 'en')
@@ -114,8 +71,13 @@ export function Header() {
 
                 <div className="flex flex-col items-center space-y-2 self-auto text-xl md:flex-row md:space-y-0 md:space-x-10 [@media(max-width:1100px)]:self-end [@media(max-width:1100px)]:pb-4 [@media(max-width:900px)]:hidden">
                     {navLinks.map(link => (
-                        <NavLink key={link.name} to={link.link} end={link.link === '/'} className={getNavClass}>
-                            {link.name}
+                        <NavLink
+                            key={t(link.name)}
+                            to={t(link.link)}
+                            end={t(link.link) === '/'}
+                            className={getNavClass}
+                        >
+                            {t('menu.' + link.name)}
                         </NavLink>
                     ))}
                 </div>
@@ -135,13 +97,13 @@ export function Header() {
                 <div className="flex flex-col space-y-4 bg-white px-4 py-4 text-lg shadow-lg sm:px-6 dark:bg-gray-800">
                     {navLinks.map(link => (
                         <NavLink
-                            key={link.name}
-                            to={link.link}
-                            end={link.link === '/'}
+                            key={t(link.name)}
+                            to={t(link.link)}
+                            end={t(link.link) === '/'}
                             className={getNavClass}
                             onClick={() => setMenuOpen(false)}
                         >
-                            {link.name}
+                            {t('menu.' + link.name)}
                         </NavLink>
                     ))}
                 </div>

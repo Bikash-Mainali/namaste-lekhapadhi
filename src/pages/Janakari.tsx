@@ -1,22 +1,23 @@
 import JaggaNap from '../assets/images/jagga-nap.png'
+import { useTranslation } from 'react-i18next'
 
 export function Janakari() {
+    const { t } = useTranslation()
     return (
         <section id="jankari" className="bg-gray-50 py-20 sm:py-22 md:py-30 dark:bg-gray-950">
             <div className="mx-auto max-w-10/12 space-y-2 px-6">
                 <h2 className="text-center text-2xl font-extrabold text-gray-800 sm:text-3xl md:text-4xl dark:text-white">
-                    जग्गा नाप सम्बन्धी जानकारी
+                    {t('information.title')}
                 </h2>
                 <p className="md:text-md mx-auto mb-15 max-w-2xl text-center font-serif text-xs leading-6 tracking-wide text-gray-600 sm:mb-22 sm:text-sm md:mb-30 dark:text-gray-200">
-                    नेपालमा जग्गाको सही नापी र नक्सा तयार पार्नु अत्यन्त आवश्यक छ। यसले जग्गाको सही स्वामित्व सुनिश्चित
-                    गर्ने, विवादहरू कम गर्ने र कानुनी सुरक्षा दिने काम गर्छ।
+                    {t('information.description')}
                 </p>
             </div>
 
             <div className="mx-auto flex w-full max-w-3/4 flex-col space-y-8 px-6">
                 <section className="w-full text-left">
                     <h2 className="mb-4 text-2xl font-semibold text-blue-600 dark:text-gray-200">
-                        १. जग्गा नाप भनेको के हो? (What is Land Measurement?)
+                        {t('information.content.section1.title')}
                     </h2>
                     <p className="text-gray-700 dark:text-gray-200">
                         जग्गा नाप भनेको जग्गाको क्षेत्रफल, सिमाना, र आकारको मापन गर्ने प्रक्रिया हो। यसमा आधुनिक उपकरण
@@ -26,7 +27,7 @@ export function Janakari() {
 
                 <section className="w-full text-left">
                     <h2 className="mb-4 text-2xl font-semibold text-blue-600 dark:text-gray-200">
-                        २. जग्गा नापको महत्व (Importance of Land Measurement)
+                        {t('information.content.section2.title')}
                     </h2>
                     <ul className="list-inside list-disc space-y-2 text-gray-700 dark:text-gray-200">
                         <li>जग्गाको सही स्वामित्व प्रमाणित गर्न मद्दत गर्छ।</li>
@@ -39,7 +40,7 @@ export function Janakari() {
 
                 <section className="w-full text-left">
                     <h2 className="mb-4 text-2xl font-semibold text-blue-600 dark:text-gray-200">
-                        ३. नापी प्रक्रिया (Measurement Process)
+                        {t('information.content.section3.title')}
                     </h2>
                     <ol className="list-inside list-decimal space-y-3 text-gray-700 dark:text-gray-200">
                         <li>जग्गा मालिकले नापी आवेदन बुझाउने।</li>
@@ -52,7 +53,7 @@ export function Janakari() {
 
                 <section className="w-full text-left">
                     <h2 className="mb-4 text-2xl font-semibold text-blue-600 dark:text-gray-200">
-                        ४. नापीका लागि आवश्यक कागजातहरू (Documents Required for Measurement)
+                        {t('information.content.section4.title')}
                     </h2>
                     <ul className="list-inside list-disc space-y-2 text-gray-700 dark:text-gray-200">
                         <li>जग्गाको स्वामित्व प्रमाणपत्र (Land Ownership Certificate)।</li>
@@ -64,7 +65,7 @@ export function Janakari() {
 
                 <section className="w-full text-left">
                     <h2 className="mb-4 text-2xl font-semibold text-blue-600 dark:text-gray-200">
-                        ५. कानुनी पक्ष (Legal Aspects)
+                        {t('information.content.section5.title')}
                     </h2>
                     <p className="leading-relaxed text-gray-700 dark:text-gray-200">
                         नापी गरिएको जग्गाको विवरण कानुनी रूपमा प्रमाणित हुन्छ र जग्गा दर्ता तथा नामसारी प्रक्रियामा
@@ -74,7 +75,7 @@ export function Janakari() {
 
                 <section className="w-full text-left">
                     <h2 className="mb-4 text-2xl font-semibold text-blue-600 dark:text-gray-200">
-                        ६. सामान्य समस्या र समाधान (Common Issues and Solutions)
+                        {t('information.content.section6.title')}
                     </h2>
                     <ul className="list-inside list-disc space-y-2 text-gray-700 dark:text-gray-200">
                         <li>सिमाना विवाद: नक्सा र प्रमाणित नापीले समाधान गर्छ।</li>
@@ -85,7 +86,7 @@ export function Janakari() {
 
                 <section className="w-full text-left">
                     <h2 className="mb-4 text-2xl font-semibold text-blue-600 dark:text-gray-200">
-                        ७. प्रायः सोधिने प्रश्नहरू (FAQs)
+                        {t('information.content.section7.title')}
                     </h2>
                     <dl className="space-y-6 text-gray-700 dark:text-gray-200">
                         <div>
@@ -120,14 +121,22 @@ export function Janakari() {
             </div>
             <section className="mx-auto mt-20 max-w-10/12 rounded-lg bg-blue-100 p-6 text-center shadow-lg sm:max-w-4/5 md:max-w-3/5 dark:bg-slate-800">
                 <h2 className="gradient-text mb-2 text-xl font-semibold text-blue-700 sm:text-2xl">
-                    सहयोगका लागि सम्पर्क गर्नुहोस्
+                    {t('information.contact.title')}
                 </h2>
-                <p className="sm:text-md mb-4 text-sm text-gray-700 md:text-lg dark:text-gray-300">
-                    तपाईंलाई जग्गा नापी सम्बन्धी कुनै सहयोग चाहिएको खण्डमा हामीलाई सम्पर्क गर्नुहोस्।
+                <p className="sm:text-md mb-6 text-sm text-gray-700 md:text-lg dark:text-gray-300">
+                    {t('information.contact.description')}
                 </p>
-                <p className="text-sm font-semibold md:text-lg dark:text-gray-300">फोन: 9851069249</p>
-                <p className="text-sm font-semibold md:text-lg dark:text-gray-300">इमेल: email@gmail.com</p>
-                <p className="text-sm font-semibold md:text-lg dark:text-gray-300">स्थान: कालंकी, काठमाडौं</p>
+                <p className="grid gap-2">
+                    <p className="text-sm font-semibold md:text-lg dark:text-gray-300">
+                        {t('information.contact.phone')}
+                    </p>
+                    <p className="text-sm font-semibold md:text-lg dark:text-gray-300">
+                        {t('information.contact.email')}
+                    </p>
+                    <p className="text-sm font-semibold md:text-lg dark:text-gray-300">
+                        {t('information.contact.address')}
+                    </p>
+                </p>
             </section>
         </section>
     )

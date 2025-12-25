@@ -30,14 +30,12 @@ export const Home = () => {
                 {/* Centered Content */}
                 <div className="relative z-10 flex w-full flex-col items-center justify-center px-4 pt-[30vh] text-center text-white">
                     <h1 className="mb-4 text-4xl font-bold sm:text-5xl md:text-6xl">{t('welcome')}</h1>
-                    <p className="mb-8 max-w-3xl text-lg sm:text-xl md:text-2xl">
-                        उपयुक्त जग्गा पत्ता लगाउन तपाईंको भरपर्दो साझेदार
-                    </p>
+                    <p className="mb-8 max-w-3xl text-lg sm:text-xl md:text-2xl">{t('hero')}</p>
                     <NavLink
                         to="/contact"
                         className="gradient-background transform cursor-pointer rounded-full bg-black px-7 py-3 font-bold tracking-widest text-white transition-all duration-300 hover:scale-105 sm:px-12 sm:py-4 sm:text-xl dark:bg-gray-950"
                     >
-                        सम्पर्क गर्नुहोस्
+                        {t('contact.reachUs')}
                     </NavLink>
                 </div>
             </section>

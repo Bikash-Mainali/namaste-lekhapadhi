@@ -3,24 +3,27 @@ import { AnimatedBorder } from '../components/AnimatedBorder.tsx'
 import { FcGoogle } from 'react-icons/fc'
 import Binod from '../assets/images/binod.png'
 import Madhab from '../assets/images/madhav.jpg'
+import { useTranslation } from 'react-i18next'
 
 export const Contact = () => {
+    const { t } = useTranslation()
+    // contact details are stored in i18n translation files
     const contactDetails = [
         {
             id: 1,
-            name: 'बिनोद कुमार मैनाली',
-            phone: '9851069249',
-            email: 'binodkumar699@gmail.com',
+            name: 'contact.binod.name',
+            phone: 'contact.binod.phone',
+            email: 'contact.binod.email',
             imgLink: `${Binod}`,
-            alt: 'बिनोद कुमार मैनाली',
+            alt: 'contact.binod.name',
         },
         {
             id: 2,
-            name: 'माधव कुमार नेपाल',
-            phone: '9843593698',
-            email: 'nmadhavkumar3@gmail.com',
+            name: 'contact.madhav.name',
+            phone: 'contact.madhav.phone',
+            email: 'contact.madhav.email',
             imgLink: `${Madhab}`,
-            alt: 'माधव कुमार नेपाल',
+            alt: 'contact.madhav.name',
         },
     ]
 
@@ -28,7 +31,7 @@ export const Contact = () => {
         <section id="contact" className="bg-gray-50 py-20 sm:py-22 md:py-30 dark:bg-gray-950">
             <div className="mx-auto max-w-10/12 px-6">
                 <h2 className="mb-15 text-center text-2xl font-extrabold text-gray-800 sm:mb-22 sm:text-3xl md:mb-30 md:text-4xl dark:text-white">
-                    सम्पर्क
+                    {t('contact.title')}
                 </h2>
 
                 {/* Top block: social icons + contacts */}
@@ -38,14 +41,13 @@ export const Contact = () => {
                             <div className="gradient-background relative rounded-lg">
                                 <AnimatedBorder>
                                     <div className="p-2 text-lg font-bold tracking-widest sm:p-3 sm:text-xl md:p-4 md:text-2xl dark:bg-gray-800 dark:text-white">
-                                        सम्पर्क गर्नुहोस्
+                                        {t('contact.reachUs')}
                                     </div>
                                 </AnimatedBorder>
                             </div>
 
                             <p className="max-w-md text-sm text-gray-600 dark:text-gray-300">
-                                हामी तपाईंको सन्देश सुन्न चाहन्छौं! सन्देश पठाउनुहोस् वा सामाजिक सञ्जाल मार्फत
-                                जोडिनुहोस्।
+                                {t('contact.description')}
                             </p>
 
                             <div className="mt-4 flex justify-center space-x-5 md:justify-start">
@@ -74,9 +76,10 @@ export const Contact = () => {
                                 ))}
                             </div>
 
-                            <p className="text-gray-700 dark:text-gray-300">
-                                <strong>स्थान:</strong> कालंकी, काठमाडौं
-                            </p>
+                            <p
+                                className="text-gray-700 dark:text-gray-300"
+                                dangerouslySetInnerHTML={{ __html: t('contact.address') }}
+                            ></p>
                         </div>
 
                         {/* Contacts list: centered inside right column */}
@@ -90,7 +93,7 @@ export const Contact = () => {
                                     <div className="flex h-1/2 w-1/2 items-center justify-center p-2">
                                         <img
                                             src={contact.imgLink}
-                                            alt={contact.alt}
+                                            alt={t(contact.alt)}
                                             className="h-full w-full rounded-full border border-gray-200 object-cover"
                                         />
                                     </div>
@@ -98,14 +101,16 @@ export const Contact = () => {
                                     {/* Info */}
                                     <div className="w-full space-y-2 border-t border-gray-300 py-2 text-center dark:border-gray-600">
                                         <p className="font-semibold text-gray-800 sm:text-lg dark:text-gray-300">
-                                            {contact.name}
+                                            {t(contact.name)}
                                         </p>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">
-                                            <strong>इमेल:</strong> {contact.email}
-                                        </p>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">
-                                            <strong>फोन:</strong> {contact.phone}
-                                        </p>
+                                        <p
+                                            className="text-sm text-gray-600 dark:text-gray-300"
+                                            dangerouslySetInnerHTML={{ __html: t(contact.phone) }}
+                                        ></p>
+                                        <p
+                                            className="text-sm text-gray-600 dark:text-gray-300"
+                                            dangerouslySetInnerHTML={{ __html: t(contact.email) }}
+                                        ></p>
                                     </div>
                                 </div>
                             ))}
@@ -128,37 +133,37 @@ export const Contact = () => {
                                     htmlFor="name"
                                     className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                                 >
-                                    नाम
+                                    {t('contact.contactForm.name.label')}
                                 </label>
                                 <input
                                     type="text"
                                     id="name"
                                     className="mt-1 block w-full rounded-md border border-gray-300 p-3 shadow-sm transition duration-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:text-white"
-                                    placeholder="तपाईंको नाम"
+                                    placeholder={t('contact.contactForm.name.placeholder')}
                                 />
                             </div>
 
                             <div>
                                 <label htmlFor="email" className="block font-medium text-gray-700 dark:text-gray-300">
-                                    इमेल
+                                    {t('contact.contactForm.email.label')}
                                 </label>
                                 <input
                                     type="email"
                                     id="email"
                                     className="mt-1 block w-full rounded-md border border-gray-300 p-3 shadow-sm transition duration-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:text-white"
-                                    placeholder="tapaiko@example.com"
+                                    placeholder={t('contact.contactForm.email.placeholder')}
                                 />
                             </div>
 
                             <div>
                                 <label htmlFor="message" className="block font-medium text-gray-700 dark:text-gray-300">
-                                    सन्देश
+                                    {t('contact.contactForm.message.label')}
                                 </label>
                                 <textarea
                                     id="message"
                                     rows={4}
                                     className="mt-1 block w-full rounded-md border border-gray-300 p-3 shadow-sm transition duration-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:text-white"
-                                    placeholder="तपाईंको सन्देश..."
+                                    placeholder={t('contact.contactForm.message.placeholder')}
                                 />
                             </div>
 
@@ -167,7 +172,7 @@ export const Contact = () => {
                                     type="submit"
                                     className="gradient-background w-full transform cursor-pointer rounded-md px-8 py-3 font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl sm:w-auto"
                                 >
-                                    सन्देश पठाउनुहोस्
+                                    {t('contact.contactForm.submit')}
                                 </button>
                             </div>
                         </form>

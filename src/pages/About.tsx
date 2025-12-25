@@ -1,42 +1,20 @@
+import { useTranslation } from 'react-i18next'
+
 export const About = () => {
+    const { t } = useTranslation()
+
     return (
-        <>
-            <section id="about-us" className="bg-gray-50 py-20 sm:py-22 md:py-30 dark:bg-gray-950">
-                <div className="mx-auto max-w-10/12 px-6">
-                    <h2 className="mb-15 text-center text-2xl font-extrabold text-gray-800 sm:mb-22 sm:text-3xl md:mb-30 md:text-4xl dark:text-gray-100">
-                        हाम्रो बारेमा
-                    </h2>
+        <section id="about-us" className="bg-gray-50 py-20 sm:py-22 md:py-30 dark:bg-gray-950">
+            <div className="mx-auto max-w-10/12 px-6">
+                <h2 className="mb-15 text-center text-2xl font-extrabold text-gray-800 sm:mb-22 sm:text-3xl md:mb-30 md:text-4xl dark:text-gray-100">
+                    {t('about.title')}
+                </h2>
 
-                    <p className="mb-6 leading-relaxed text-gray-700 sm:text-2xl dark:text-gray-300">
-                        स्वागत छ <span className="font-semibold">नमस्ते लेखापढी सेवा</span> मा, सम्पत्ति र कानुनी
-                        समाधानमा तपाईंको विश्वासयोग्य साझेदार। हामी नेपालमा सम्पत्ति र कानुनी मामिलाहरू सम्हाल्ने
-                        व्यक्तिहरू, परिवारहरू र संस्थाहरूलाई भरपर्दो, पारदर्शी, र व्यावसायिक सेवाहरू प्रदान गर्नमा
-                        विशेषज्ञता राख्छौं।
-                    </p>
-
-                    <p className="mb-6 leading-relaxed text-gray-700 sm:text-2xl dark:text-gray-300">
-                        हाम्रो समर्पित टोलीमा अनुभवी कानुनी सल्लाहकारहरू, नापजोख विशेषज्ञहरू र प्रमाणित नोटरी पेशेवरहरू
-                        सामेल छन्, जसले जटिल प्रक्रियाहरूलाई सरल बनाउन कटिबद्ध छन्। जग्गाको नाम स्थानान्तरणदेखि कानुनी
-                        मसौदा, नक्सा तयार गर्ने, विवाद समाधान र अदालतमा कागजात पेश गर्नुहुँदासम्म हामी ठ्याक्कै,
-                        प्रभावकारी र नेपालका कानुनी मापदण्डहरू अनुरुप सेवा प्रदान गर्छौं।
-                    </p>
-
-                    <p className="mb-6 leading-relaxed text-gray-700 sm:text-2xl dark:text-gray-300">
-                        हामी ईमान्दारी, जवाफदेहिता र ग्राहक सन्तुष्टिलाई प्राथमिकता दिन्छौं। हाम्रो लक्ष्य तपाईंका
-                        सम्पत्ति सम्बन्धि निर्णयहरू सुरक्षित, नियमअनुरुप र चिन्तामुक्त रहुन सुनिश्चित गर्नु हो — किनकि
-                        हामी बुझ्छौं कि सम्पत्ति केवल कागजी प्रक्रिया होइन; यो तपाईंको लगानी, तपाईंको भविष्य र तपाईंको
-                        मनको शान्ति हो।
-                    </p>
-
-                    <p className="leading-relaxed text-gray-700 sm:text-2xl dark:text-gray-300">
-                        दस्तावेजीकरण, कानुनी परामर्श, जग्गा नापजोख, मध्यमता वा नोटरी सेवाहरू मध्ये जुनसुकै सहयोग चाहियो
-                        भने, वर्षौंको अनुभवले समर्थित व्यक्तिगत सहयोगका लागि हामी यहाँ छौं।
-                        <span className="font-semibold">
-                            तपाईंको विश्वास हाम्रा लागि आधार हो — र तपाईंको सफलतामै हाम्रो प्राथमिकता।
-                        </span>
-                    </p>
-                </div>
-            </section>
-        </>
+                <p
+                    className="mb-6 leading-relaxed text-gray-700 sm:text-2xl dark:text-gray-300"
+                    dangerouslySetInnerHTML={{ __html: t('about.content') }}
+                ></p>
+            </div>
+        </section>
     )
 }

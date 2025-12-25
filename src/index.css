@@ -36,8 +36,8 @@
 
 @theme {
     --color-midnight: oklch(0.3065 0.0484 270.32);
-    --color-midnight-light1: #1079F4FF;
-    --color-midnight-light2: #71B5E3FF;
+    --color-midnight-light1: #1079f4ff;
+    --color-midnight-light2: #71b5e3ff;
     --height-header: var(--header-height);
     --animate-background1: background-move1 ease infinite;
     --animate-border: gradient-xy 4s ease infinite;

@@ -2,8 +2,10 @@ import AnimatedWave from './AnimatedWave.tsx'
 import { FaFacebookF, FaPhone } from 'react-icons/fa'
 import { FcGoogle } from 'react-icons/fc'
 import { ImLocation2 } from 'react-icons/im'
+import { useTranslation } from 'react-i18next'
 
 export default function Footer() {
+    const { t } = useTranslation()
     return (
         <footer className="relative flex h-auto flex-col overflow-hidden bg-gray-800 text-white dark:bg-gray-900 dark:text-gray-200">
             <AnimatedWave />
@@ -15,31 +17,33 @@ export default function Footer() {
                 <div className="order-4 flex flex-col gap-4 sm:order-1">
                     <div className="space-y-3 text-sm sm:text-base">
                         <h1 className="space-x-3 bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-xl font-bold text-transparent md:text-2xl">
-                            नमस्ते लेखापढी & कानुनी सेवा
+                            {t('footer.brandName')}
                         </h1>
-                        <p className="text-xs sm:text-sm">उपयुक्त जग्गा फेला पार्न तपाईंको भरपर्दो साझेदार</p>
-                        <p className="text-xs sm:text-sm">© 2025 NLKS. All copy rights reserved.</p>
+                        <p className="text-xs sm:text-sm">{t('footer.tagline')}</p>
+                        <p className="text-xs sm:text-sm">{t('footer.rights')}</p>
                     </div>
                 </div>
 
                 {/* Column 2 */}
                 <div className="order-2 flex flex-col flex-wrap gap-4">
                     <div className="space-y-2">
-                        <h1 className="text-lg font-bold underline">महत्त्वपूर्ण लिंकहरू</h1>
+                        <h1 className="text-lg font-bold underline">{t('footer.importantLinks.title')}</h1>
                         <p className="text-sm underline hover:text-blue-300 dark:hover:text-blue-400">
-                            <a href="https://dolma.gov.np/">भूमि व्यवस्थापन तथा अभिलेख विभाग</a>
+                            <a href="https://dolma.gov.np/">{t('footer.importantLinks.landManagement')}</a>
                         </p>
                         <p className="text-sm underline hover:text-blue-300 dark:hover:text-blue-400">
-                            <a href="https://kalanki.dolma.gov.np/office/kalanki">मालपोत कार्यालय कलंकी, काठमाण्डौं</a>
+                            <a href="https://kalanki.dolma.gov.np/office/kalanki">
+                                {t('footer.importantLinks.malpotOffice')}
+                            </a>
                         </p>
                         <p className="text-sm underline hover:text-blue-300 dark:hover:text-blue-400">
                             <a href="https://www.dolma.gov.np/office/dept/content/form-format-1643263780">
-                                डाउनलोड / फारमको ढाँचा
+                                {t('footer.importantLinks.downloadForms')}
                             </a>
                         </p>
                         <p className="text-sm underline hover:text-blue-300 dark:hover:text-blue-400">
                             <a href="https://giwmscdnone.gov.np/media/pdf_upload/right-to-information-3_zu65sc7.pdf?utm_source=chatgpt.com">
-                                सूचनाको हक सम्बन्धी ऐन
+                                {t('footer.importantLinks.rtiAct')}
                             </a>
                         </p>
                     </div>
@@ -48,7 +52,7 @@ export default function Footer() {
                 {/* Column 3 */}
                 <div className="order-3 flex flex-col flex-wrap gap-4">
                     <div className="space-y-2 text-sm sm:text-base">
-                        <h1 className="text-lg font-bold underline">सम्पर्क</h1>
+                        <h1 className="text-lg font-bold underline"> {t('footer.contact.title')}</h1>
                         <a
                             href="tel:+4733378901"
                             className="flex flex-wrap justify-center gap-3 text-sm underline hover:text-blue-300 hover:underline dark:hover:text-blue-400"
@@ -56,7 +60,7 @@ export default function Footer() {
                             <span>
                                 <FaPhone className="text-xl sm:text-2xl" aria-hidden="true" />
                             </span>
-                            <span>9851069249</span>
+                            <span>{t('footer.contact.phone')}</span>
                         </a>
 
                         <a
@@ -66,7 +70,7 @@ export default function Footer() {
                             <span>
                                 <ImLocation2 className="text-xl" aria-hidden="true" />
                             </span>
-                            <span>कलंकी, काठमाडौं</span>
+                            <span>{t('footer.contact.address')}</span>
                         </a>
                     </div>
                 </div>

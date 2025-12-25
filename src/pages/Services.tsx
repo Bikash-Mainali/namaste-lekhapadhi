@@ -9,6 +9,7 @@ import {
     FaGavel,
     FaHandshake,
 } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 interface ServiceProperties {
     id: number
     title: string
@@ -17,6 +18,7 @@ interface ServiceProperties {
 }
 
 export const Services: FC = () => {
+    const { t } = useTranslation()
     const services: ServiceProperties[] = [
         {
             id: 1,
@@ -72,11 +74,10 @@ export const Services: FC = () => {
         <section id="service" className="bg-gray-50 py-20 sm:py-22 md:py-30 dark:bg-gray-950">
             <div className="mx-auto max-w-10/12 px-6">
                 <h2 className="text-center text-2xl font-extrabold text-gray-800 sm:text-3xl md:text-4xl dark:text-white">
-                    हाम्रो सेवाहरू
+                    {t('services.title')}
                 </h2>
                 <p className="md:text-md mx-auto mb-15 max-w-2xl text-center text-xs leading-6 tracking-wide text-gray-600 sm:mb-22 sm:text-sm md:mb-30 dark:text-gray-300">
-                    हामी नेपालभर भर, पारदर्शिता र विशेषज्ञताको साथ व्यावसायिक कानुनी र कागजात सम्बन्धी सेवाहरू प्रदान
-                    गर्छौं।
+                    {t('services.description')}
                 </p>
 
                 <div className="grid grid-cols-1 gap-12 text-center sm:grid-cols-2 lg:grid-cols-3">

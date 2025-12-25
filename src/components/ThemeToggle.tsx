@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import ToggleIcon from './toggle/ToggleIcon.tsx'
 
 const THEMES = {
@@ -26,7 +26,7 @@ export default function ThemeToggle() {
         const newTheme = theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT
         localStorage.setItem('theme', newTheme)
         setTheme(newTheme)
-        setToggled(!toggled);
+        setToggled(!toggled)
     }
 
     return (
