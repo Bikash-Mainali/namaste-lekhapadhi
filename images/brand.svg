@@ -6,13 +6,13 @@
     <defs>
         <!-- Smooth gradient -->
         <linearGradient id="fancyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#ff6ec4"/>
-            <stop offset="50%" stop-color="#7873f5"/>
-            <stop offset="100%" stop-color="#4adeff"/>
+            <stop offset="0%" stop-color="#1179f6"/>
+            <stop offset="50%" stop-color="#1179f6"/>
+            <stop offset="100%" stop-color="#1179f6"/>
         </linearGradient>
 
         <!-- High-resolution glow -->
-        <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+        <filter x="-40%" y="-40%" width="180%" height="180%">
             <feGaussianBlur in="SourceGraphic" stdDeviation="40" result="blur"/>
             <feMerge>
                 <feMergeNode in="blur"/>
@@ -24,7 +24,6 @@
     <!-- Correct upward orientation: flipped vertically without distortion -->
     <g transform="scale(1,-1) translate(0,-3000)"
        fill="url(#fancyGrad)"
-       filter="url(#softGlow)"
        stroke="none">
 
         <path d="M1291 2927 c-22 -11 -42 -74 -203 -647 -254 -901 -229 -787 -211
